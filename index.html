@@ -10,6 +10,10 @@
                 rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
                 rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+                rel="stylesheet">
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link rel="icon" type="image/png" href="/andrez-logo-letters.png" />
         <link rel="stylesheet" href="/src/style.css" />
@@ -27,30 +31,34 @@
                         <!-- Desktop menu links (Capsule Design) -->
                         <div
                                 class="hidden md:flex items-center gap-1 bg-surface-container-high border border-surface-container-highest/20 px-6 py-2 rounded-full smooth-shadow">
-                                <a class="nav-link text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
+                                <a class="nav-link text-white hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
                                         href="#menu">Menu</a>
-                                <a class="nav-link text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
+                                <a class="nav-link text-white hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
                                         href="#about">About</a>
-                                <a class="nav-link text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
+                                <a class="nav-link text-white hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
                                         href="#reviews">Reviews</a>
-                                <a class="nav-link text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
+                                <a class="nav-link text-white hover:text-primary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest px-4"
                                         href="#contact">Contact</a>
                         </div>
                         <!-- Desktop CTA -->
                         <div class="hidden md:block">
-                                <a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-primary transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold shadow-[0_4px_14px_rgba(255,186,32,0.2)] border-2 border-black"
-                                        href="#">
+                                <a class="bg-primary-container text-black px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-primary transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold shadow-[0_4px_14px_rgba(255,186,32,0.2)] border-2 border-black flex items-center gap-2"
+                                        href="https://wolt.com/en/isl/reykjavik/restaurant/andrezrvk">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 95 150 110" width="22" height="16"><path d="M 75 110 L 105 190 L 135 110 L 165 190 L 195 110" fill="none" stroke="#00C2E8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                         Order on Wolt
                                 </a>
                         </div>
                         <!-- Mobile Hamburger Button -->
                         <button id="mobile-menu-btn"
-                                class="md:hidden text-on-background focus:outline-none p-2 flex items-center justify-center relative z-[60]">
+                                class="md:hidden text-on-background focus:outline-none flex items-start justify-end fixed top-0 right-0 z-[60] bg-black w-20 h-20 pt-3 pr-3 transition-opacity duration-300"
+                                style="clip-path: polygon(0 0, 100% 0, 100% 100%);">
                                 <span class="material-symbols-outlined text-3xl" id="hamburger-icon">menu</span>
                         </button>
                 </div>
                 <!-- Mobile Sidebar Overlay -->
-                <div id="mobile-sidebar-overlay" class="md:hidden fixed inset-0 bg-black/60 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+                <div id="mobile-sidebar-overlay"
+                        class="md:hidden fixed inset-0 bg-black/60 z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+                </div>
 
                 <!-- Mobile Sidebar Menu -->
                 <div id="mobile-sidebar"
@@ -63,8 +71,9 @@
                                 href="#reviews">Reviews</a>
                         <a class="text-on-surface hover:text-primary-container pl-3 py-2 font-label-sm text-label-sm transition-colors duration-200 uppercase tracking-widest border-b border-surface-container-high/50"
                                 href="#contact">Contact</a>
-                        <a class="bg-primary-container text-on-primary-container text-center py-3.5 rounded-full font-label-sm text-label-sm hover:bg-primary transition-all duration-200 uppercase tracking-widest font-bold mt-4 shadow-[0_4px_14px_rgba(255,186,32,0.2)] border-2 border-black"
-                                href="#">
+                        <a class="bg-primary-container text-black text-center py-3.5 rounded-full font-label-sm text-label-sm hover:bg-primary transition-all duration-200 uppercase tracking-widest font-bold mt-4 border-2 border-black flex items-center justify-center gap-2"
+                                href="https://wolt.com/en/isl/reykjavik/restaurant/andrezrvk">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 95 150 110" width="22" height="16"><path d="M 75 110 L 105 190 L 135 110 L 165 190 L 195 110" fill="none" stroke="#00C2E8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 Order on Wolt
                         </a>
                 </div>
@@ -72,11 +81,12 @@
         <main class="pt-0">
                 <!-- Hero Section -->
                 <section
-                        class="relative w-full min-h-[72vh] lg:min-h-[76vh] flex items-start justify-center overflow-hidden bg-[#0e0e0e] pt-24 pb-16 md:pb-20 lg:pt-28 lg:pb-24">
+                        class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0e0e0e] pt-24 pb-16 md:pb-20 lg:pt-28 lg:pb-24">
 
                         <!-- Background Cheese Drip Graphic -->
                         <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
-                                <img src="/cheese-drip.png" alt="Hero Background" class="w-full h-full object-cover object-top" />
+                                <img src="/cheese-drip.png" alt="Hero Background"
+                                        class="w-full h-full object-cover object-top" />
                         </div>
 
                         <div
@@ -92,26 +102,26 @@
                                         <!-- Left Column (Hero Text Content - Left Aligned) -->
                                         <div
                                                 class="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-20 reveal">
-                                                <h1
-                                                        class="font-display-lg text-[40px] leading-[48px] md:text-[64px] md:leading-[72px] text-on-background max-w-2xl">
-                                                        Fresh French Tacos &amp; Crepes in Reykjavík
+                                                <h1 class="text-[40px] leading-[56px] md:text-[64px] md:leading-[84px] text-on-background max-w-2xl"
+                                                        style="font-family: 'Merriweather', serif;">
+                                                        <span class="bg-black px-3 py-1"
+                                                                style="box-decoration-break: clone; -webkit-box-decoration-break: clone;">Fresh
+                                                                French Tacos &amp; Crepes in Reykjavík</span>
                                                 </h1>
-                                                <p
-                                                        class="font-body-md text-body-md md:text-lg text-on-surface-variant max-w-xl leading-relaxed">
-                                                        Generous portions, friendly service, and freshly toasted French
-                                                        Tacos — toasted to perfection with meat, golden fries, and our
-                                                        signature cheesy sauce inside, alongside delicious sweet and
-                                                        savory crepes.
-                                                </p>
-                                                
+
                                                 <!-- Action Buttons -->
-                                                <div class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
-                                                        <a class="w-full sm:w-auto text-center bg-primary-container text-on-primary-container px-10 py-3.5 rounded-full font-label-sm hover:bg-primary transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold shadow-[0_4px_14px_rgba(255,186,32,0.3)] border-2 border-black"
-                                                                href="#menu">
+                                                <div
+                                                        class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
+                                                        <a class="w-full sm:w-auto text-center bg-primary-container text-black px-10 py-3.5 rounded-full font-label-sm hover:bg-primary transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold border-2 border-black flex items-center justify-center gap-2"
+                                                                href="https://store.salescloud.is/?uuid=41ba87fe-6b92-4654-ba90-571a973f282b">
+                                                                <span
+                                                                        class="material-symbols-outlined text-[20px]">restaurant</span>
                                                                 View Menu
                                                         </a>
-                                                        <a class="w-full sm:w-auto text-center border-2 border-primary-container text-primary-container px-10 py-3.5 rounded-full font-label-sm hover:bg-primary-container/10 transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold"
-                                                                href="#contact">
+                                                        <a class="w-full sm:w-auto text-center bg-black text-white border-2 border-white px-10 py-3.5 rounded-full font-label-sm hover:bg-black transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold flex items-center justify-center gap-2"
+                                                                href="https://www.google.com/maps/dir/?api=1&destination=101+Reykjav%C3%ADk">
+                                                                <span
+                                                                        class="material-symbols-outlined text-[20px]">location_on</span>
                                                                 Find Us
                                                         </a>
                                                 </div>
@@ -143,33 +153,10 @@
                         </div>
                 </section>
                 <!-- About Section -->
-                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background border-b border-surface-container reveal"
-                        id="about">
-                        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-                                <div class="space-y-base">
-                                        <h2
-                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-container">
-                                                Freshly Made in Borgartún</h2>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">
-                                                At Andrez, we believe in the simple joy of a well-prepared meal. Located
-                                                in the bustling heart of Borgartún, our neighborhood kitchen is
-                                                dedicated to serving up generous, comforting dishes that make you feel
-                                                right at home.
-                                        </p>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">Whether you're
-                                                craving one of our signature sweet or savory crepes, digging into our
-                                                authentic French Tacos — a unique toasted delight filled with meat,
-                                                fries, and our signature cheesy sauce, distinctly different from Mexican
-                                                tacos — or just looking for a friendly spot to grab lunch, we're here to
-                                                deliver quality food with a warm smile.</p>
-                                </div>
-                                <div
-                                        class="rounded-lg overflow-hidden h-[400px] smooth-shadow border border-surface-container">
-                                        <img alt="Andrez Interior"
-                                                class="w-full h-full object-cover opacity-80 transition-all duration-500 hover:scale-105"
-                                                data-alt="A warm, inviting interior shot of a casual dining restaurant."
-                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3FY1uY-n6L7lbEqdVmIs10ttEHDjw0N1zZ-2DqCG-MZdQWCrvoezUgncJ_7clWqYn9tDKcTF6yXxEIpg19W0UmqBBKDe-I9VGvInYdtJW8nGf6pZPGgL5UGu57FzfmhZFBNuqtrzz8I3EKC3Vfy1-eGKsRNjVW_eKs2xuqMEHbJBTmLG0B-c0xBb9E_j5CuvGoU-FSVsJFgKV8IYrv1X2Nj3DYEJnAAMpmPKxFcbhmSh3iptaqhYQcGhb7PohntnL1MpXrqk_7TlC" />
-                                </div>
+                <section class="relative py-28 md:py-44 overflow-hidden" id="about">
+                        <!-- Wood Background -->
+                        <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                                <img src="/madera.png" alt="Wood background" class="w-full h-full object-cover" />
                         </div>
                 </section>
                 <!-- Popular Items (Bento Grid) -->

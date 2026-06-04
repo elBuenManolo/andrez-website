@@ -180,28 +180,9 @@ function initMobileMenu() {
         });
 }
 
-// Transparent navbar scroll glassmorphism
-function initNavbarScroll() {
-        const nav = document.querySelector('nav');
-        if (!nav) return;
-
-        function handleScroll() {
-                if (window.scrollY > 50) {
-                        nav.classList.add('scrolled');
-                } else {
-                        nav.classList.remove('scrolled');
-                }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        // Call once on init to handle reload in scrolled position
-        handleScroll();
-}
-
 function init() {
         initObserver();
         initMobileMenu();
-        initNavbarScroll();
 }
 
 if (document.readyState === 'loading') {
