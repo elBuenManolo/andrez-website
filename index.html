@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Andrez - Fresh Crepes, Tacos &amp; Comfort Food in Reykjavík</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&amp;family=Archivo+Narrow:wght@700&amp;family=Inter:wght@600&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-container-highest": "#353535",
+                                                "on-tertiary-fixed": "#1c1c18",
+                                                "surface-container": "#1f2020",
+                                                "inverse-on-surface": "#303030",
+                                                "surface-bright": "#393939",
+                                                "inverse-surface": "#e4e2e1",
+                                                "primary-fixed": "#ffdea8",
+                                                "on-surface": "#e4e2e1",
+                                                "secondary": "#c8c6c5",
+                                                "secondary-fixed-dim": "#c8c6c5",
+                                                "on-secondary-fixed-variant": "#474746",
+                                                "error-container": "#93000a",
+                                                "on-primary-container": "#6b4c00",
+                                                "surface-dim": "#131313",
+                                                "secondary-fixed": "#e5e2e1",
+                                                "on-secondary": "#313030",
+                                                "on-background": "#e4e2e1",
+                                                "tertiary": "#e3e0da",
+                                                "tertiary-container": "#c6c4bf",
+                                                "surface-container-high": "#2a2a2a",
+                                                "primary-fixed-dim": "#ffba20",
+                                                "primary-container": "#ffb800",
+                                                "surface-container-lowest": "#0e0e0e",
+                                                "on-primary": "#412d00",
+                                                "on-primary-fixed": "#271900",
+                                                "on-primary-fixed-variant": "#5e4200",
+                                                "secondary-container": "#474746",
+                                                "surface-variant": "#353535",
+                                                "surface-tint": "#ffba20",
+                                                "outline": "#9e8f78",
+                                                "primary": "#ffdca1",
+                                                "on-secondary-container": "#b7b5b4",
+                                                "on-tertiary": "#31312d",
+                                                "on-tertiary-fixed-variant": "#474743",
+                                                "background": "#131313",
+                                                "on-error": "#690005",
+                                                "outline-variant": "#514532",
+                                                "tertiary-fixed-dim": "#c9c6c1",
+                                                "surface-container-low": "#1b1c1c",
+                                                "surface": "#131313",
+                                                "tertiary-fixed": "#e5e2dc",
+                                                "error": "#ffb4ab",
+                                                "on-tertiary-container": "#52514d",
+                                                "on-secondary-fixed": "#1c1b1b",
+                                                "inverse-primary": "#7c5800",
+                                                "on-surface-variant": "#d5c4ab",
+                                                "on-error-container": "#ffdad6"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "base": "8px",
+                                                "section-gap": "80px",
+                                                "gutter": "16px",
+                                                "margin-desktop": "64px",
+                                                "margin-mobile": "20px"
+                                        },
+                                        "fontFamily": {
+                                                "body-md": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "display-lg": [
+                                                        "Archivo Narrow"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Archivo Narrow"
+                                                ],
+                                                "label-sm": [
+                                                        "Inter"
+                                                ],
+                                                "headline-lg": [
+                                                        "Archivo Narrow"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "24px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "80px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                .material-symbols-outlined {
+                        font-family: 'Material Symbols Outlined';
+                        font-weight: normal;
+                        font-style: normal;
+                        font-size: 24px;
+                        line-height: 1;
+                        letter-spacing: normal;
+                        text-transform: none;
+                        display: inline-block;
+                        white-space: nowrap;
+                        word-wrap: normal;
+                        direction: ltr;
+                        -webkit-font-feature-settings: 'liga';
+                        -webkit-font-smoothing: antialiased;
+                }
+
+                .smooth-shadow {
+                        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+                }
+
+                .drip-divider {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        overflow: hidden;
+                        line-height: 0;
+                        transform: rotate(180deg);
+                }
+
+                .drip-divider svg {
+                        position: relative;
+                        display: block;
+                        width: calc(100% + 1.3px);
+                        height: 40px;
+                }
+
+                .drip-divider .shape-fill {
+                        fill: #131313;
+                }
+
+                .reveal {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+                }
+
+                .reveal-active {
+                        opacity: 1;
+                        transform: translateY(0);
+                }
+        </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased">
+        <!-- Top Navigation (Desktop) -->
+        <nav
+                class="hidden md:flex fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md shadow-sm border-b border-surface-container-high">
+                <div class="flex justify-between items-center px-margin-desktop h-20 max-w-7xl mx-auto w-full">
+                        <a class="h-14 w-32 overflow-hidden relative flex items-center" href="#">
+                                <img alt="Andrez Logo" class="h-16 w-auto object-contain"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7mjDuiZIjD7_x-oYFXPbLbdQ9DjdJWAc5K9CjY22MQtZqasAFkouhUg2epQpxo0n6MEMBM-W0Ha85LuX0k-GFyKXHGCdmCQLa3saiXKx4cTaMuasIA-Et5LBZrYV4dBYRjjDabxUrAQbIftiHQX-1WTC-ppjYZUlq4b0nqnvrMTwXLecx_n_ia7YZkdPs8w68k_d5GpVpVuI2-9s0EVa6uwT5QK6ExX9MH86aXQ0dy-qLlhqcuXm63D-73eZTstpy0-CJGBEf3kkb" />
+                        </a>
+                        <div class="flex items-center gap-8">
+                                <a class="text-primary-container border-b-2 border-primary-container pb-1 font-label-sm text-label-sm hover:opacity-90 transition-opacity duration-200 uppercase tracking-widest"
+                                        href="#menu">Menu</a>
+                                <a class="text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm hover:opacity-90 duration-200 uppercase tracking-widest"
+                                        href="#about">About</a>
+                                <a class="text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm hover:opacity-90 duration-200 uppercase tracking-widest"
+                                        href="#reviews">Reviews</a>
+                                <a class="text-on-surface-variant hover:text-primary-container transition-colors font-label-sm text-label-sm hover:opacity-90 duration-200 uppercase tracking-widest"
+                                        href="#contact">Contact</a>
+                        </div>
+                        <a class="bg-primary-container text-on-primary-container px-6 py-2 rounded font-label-sm text-label-sm hover:bg-primary transition-colors duration-200 scale-95 uppercase tracking-widest"
+                                href="#">
+                                Order on Wolt
+                        </a>
+                </div>
+        </nav>
+        <!-- Side Navigation / Bottom Nav (Mobile) -->
+        <nav
+                class="md:hidden fixed bottom-0 w-full z-50 bg-surface-container border-t border-surface-container-high shadow-[0_-4px_20px_-2px_rgba(0,0,0,0.5)]">
+                <div class="flex justify-around items-center h-16">
+                        <a class="flex flex-col items-center justify-center w-full h-full text-primary-container"
+                                href="#menu">
+                                <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+                                <span class="font-label-sm text-[10px] mt-1 uppercase tracking-widest">Menu</span>
+                        </a>
+                        <a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary-container"
+                                href="#about">
+                                <span class="material-symbols-outlined">info</span>
+                                <span class="font-label-sm text-[10px] mt-1 uppercase tracking-widest">About</span>
+                        </a>
+                        <a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary-container"
+                                href="#reviews">
+                                <span class="material-symbols-outlined">rate_review</span>
+                                <span class="font-label-sm text-[10px] mt-1 uppercase tracking-widest">Reviews</span>
+                        </a>
+                        <a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary-container"
+                                href="#contact">
+                                <span class="material-symbols-outlined">contact_page</span>
+                                <span class="font-label-sm text-[10px] mt-1 uppercase tracking-widest">Contact</span>
+                        </a>
+                </div>
+        </nav>
+        <main class="pt-20 md:pt-20 pb-24 md:pb-0">
+                <!-- Hero Section -->
+                <section
+                        class="relative w-full h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden bg-background">
+                        <div class="absolute inset-0 z-0">
+                                <img alt="Fresh Crepes, Tacos &amp; Comfort Food in Reykjavík"
+                                        class="w-full h-full object-cover object-center opacity-60"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzMQsYUtOE5hG5MzQ6LduvvrIqMHvUCWpf9O7PWuyx6qrINygraERmggdZif5R3HHOSEoQZrU1g89l7Hlfp7aHA4jY_p7JUf7uvsWsyhcX-KdxAh0In4zeththwl6tvJMevKzcsw7u-1YXvpiziqWOnEAmc_-l7kqKzBMLUvX_OB_ChOb70W1wpinja-_fWL4NVHm7RWZ2nBcfl37JTpyYDj5iRB3jLaqYJujMCX4TXvP5ezRsmVOf40wHQ73BkFHGBaKGrmPlhxzp" />
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent">
+                                </div>
+                        </div>
+                        <div
+                                class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto mt-20 reveal">
+                                <h1
+                                        class="font-display-lg text-display-lg text-on-background mb-base max-w-4xl mx-auto drop-shadow-2xl">
+                                        Fresh Crepes, French Tacos &amp; Comfort Food in Reykjavík</h1>
+                                <p
+                                        class="font-body-md text-body-md text-on-surface-variant mb-margin-desktop max-w-2xl mx-auto drop-shadow-md">
+                                        Generous portions, friendly service, and freshly made French Tacos — toasted
+                                        with cheesy sauce and fries inside — in the heart of Borgartún.</p>
+                                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                        <a class="w-full sm:w-auto bg-surface-container text-on-surface px-8 py-4 rounded font-label-sm hover:bg-surface-container-high transition-colors duration-200 uppercase tracking-widest"
+                                                href="#menu">
+                                                View Menu
+                                        </a>
+                                        <a class="w-full sm:w-auto bg-primary-container text-on-primary-container px-8 py-4 rounded font-label-sm hover:bg-primary transition-colors duration-200 uppercase tracking-widest"
+                                                href="#">
+                                                Order on Wolt
+                                        </a>
+                                        <a class="w-full sm:w-auto border border-primary-container text-primary-container px-8 py-4 rounded font-label-sm hover:bg-primary-container/10 transition-colors duration-200 uppercase tracking-widest"
+                                                href="#location">
+                                                Get Directions
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="drip-divider">
+                                <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="shape-fill"
+                                                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                                                opacity=".25"></path>
+                                        <path class="shape-fill"
+                                                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                                                opacity=".5"></path>
+                                        <path class="shape-fill"
+                                                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z">
+                                        </path>
+                                </svg>
+                        </div>
+                </section>
+                <!-- About Section -->
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background border-b border-surface-container reveal"
+                        id="about">
+                        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                                <div class="space-y-base">
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-container">
+                                                Freshly Made in Borgartún</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                At Andrez, we believe in the simple joy of a well-prepared meal. Located
+                                                in the bustling heart of Borgartún, our neighborhood kitchen is
+                                                dedicated to serving up generous, comforting dishes that make you feel
+                                                right at home.
+                                        </p>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Whether you're
+                                                craving one of our signature sweet or savory crepes, digging into our
+                                                authentic French Tacos — a unique toasted delight filled with meat,
+                                                fries, and our signature cheesy sauce, distinctly different from Mexican
+                                                tacos — or just looking for a friendly spot to grab lunch, we're here to
+                                                deliver quality food with a warm smile.</p>
+                                </div>
+                                <div
+                                        class="rounded-lg overflow-hidden h-[400px] smooth-shadow border border-surface-container">
+                                        <img alt="Andrez Interior"
+                                                class="w-full h-full object-cover opacity-80 transition-all duration-500 hover:scale-105"
+                                                data-alt="A warm, inviting interior shot of a casual dining restaurant."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3FY1uY-n6L7lbEqdVmIs10ttEHDjw0N1zZ-2DqCG-MZdQWCrvoezUgncJ_7clWqYn9tDKcTF6yXxEIpg19W0UmqBBKDe-I9VGvInYdtJW8nGf6pZPGgL5UGu57FzfmhZFBNuqtrzz8I3EKC3Vfy1-eGKsRNjVW_eKs2xuqMEHbJBTmLG0B-c0xBb9E_j5CuvGoU-FSVsJFgKV8IYrv1X2Nj3DYEJnAAMpmPKxFcbhmSh3iptaqhYQcGhb7PohntnL1MpXrqk_7TlC" />
+                                </div>
+                        </div>
+                </section>
+                <!-- Popular Items (Bento Grid) -->
+                <section
+                        class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-b border-surface-container">
+                        <div class="max-w-7xl mx-auto">
+                                <div class="text-center mb-margin-desktop reveal">
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-2">
+                                                Popular Items</h2>
+                                        <div class="h-1 w-16 bg-primary-container mx-auto mb-4"></div>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Our guests'
+                                                favorites, prepared fresh daily.</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[300px]">
+                                        <!-- Item 1: Sweet Crepes (Large) -->
+                                        <div class="md:col-span-2 md:row-span-2 rounded-lg overflow-hidden relative group smooth-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-surface-container reveal"
+                                                style="transition-delay: 100ms;">
+                                                <img alt="Sweet Crepes"
+                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                                                        data-alt="A beautifully plated sweet crepe folded neatly on a pristine white ceramic plate."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr5VYtl-s4IQ3D6vHQnkgPMHjj9SyZ0nHLuBVaBYUrqkJ2iqq5esemKecCNG36mkmOFM4tfqRIVyWzg_TR5-uRXxSLPgC-1op7VkRvOmHeddQoYAJp8bewPu3XcyfkBZe14LECTy2vlIldD1Nu-ey2O4Rbernp66Scheyv2Ux7u-eyoA_-ZetrmAhFIc6DNqSEDtqQ8Xug0Sv3ixqZ0ADBzNgICMvzcnmT-88sRP3l47I68hxiaffV5VOx2mF3smsN1ph4Nn1EUozJ" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent flex flex-col justify-end p-margin-mobile md:p-margin-desktop">
+                                                        <span
+                                                                class="inline-block bg-primary-container text-on-primary-container px-3 py-1 rounded font-label-sm text-label-sm w-max mb-2 uppercase tracking-widest">Signature</span>
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+                                                                Sweet Crepes</h3>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1 mb-2">
+                                                                Classic thin pancakes filled with Nutella, fresh fruit,
+                                                                or homemade jams.</p>
+                                                        <span class="font-label-sm text-label-sm text-primary-fixed">2,200
+                                                                ISK</span>
+                                                </div>
+                                        </div>
+                                        <!-- Item 2: Pulled Pork Tacos -->
+                                        <div class="rounded-lg overflow-hidden relative group smooth-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-surface-container reveal"
+                                                style="transition-delay: 200ms;">
+                                                <img alt="Pulled Pork Tacos"
+                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                                                        data-alt="Close-up of vibrant pulled pork tacos."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBCS5F1Tz0EVlDpR5G2bva18aYBSbfHx4fkzfecpYwf8ZRy3qdjraKmhpaCnlnj8-VQfT_e_2YLnK0fqfttgDmHu4nWC3Yf89B92cXCMatQBWFUH01gA_hQsl8KNBReV5MumHoUHHCYPhQ1C8YuMw4WTSYsrm7x9VQqCw-RNWKLp8917n2aJS2qO3cJekd5t36AXhIIR6XyyhVQLZTUoTMGB3UxuHkZXX67gNjLhlNgjLfCkPESvFKyXLqSqogH9K-TmQ4MMTHZU6c" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent flex flex-col justify-end p-margin-mobile">
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+                                                                Pulled Pork French Tacos</h3>
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-primary-fixed mt-1">2,800
+                                                                ISK</span>
+                                                </div>
+                                        </div>
+                                        <!-- Item 3: Savory Crepes -->
+                                        <div class="rounded-lg overflow-hidden relative group smooth-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-surface-container reveal"
+                                                style="transition-delay: 300ms;">
+                                                <img alt="Savory Crepes"
+                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                                                        data-alt="A savory crepe filled with melted cheese, ham, and fresh spinach."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPP6VuohPHYm0j148ncxoIanQxvCtZVA-FyouIkxRuK08o2KkrcHZINtwIzBbElXrmY4rVfP4OsYkRzHllzrh7vxqmIE2vPKjw3eWqTb3bEAdWjKx9xAtwebjA-2HdoGjCUQNcMFKnCU7Ydua5XHS-kCqlcGpFl6zoQp2W-gBTxPKuaYvcJWULjgIp0HC93Ze80B9ZWdOILMdsHJd0h--N2IbKSfZoBUnHTFB5U519UBbAYild67tYzxHiNXo2HGMcCUy80u5NmAeF" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent flex flex-col justify-end p-margin-mobile">
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+                                                                Savory Crepes</h3>
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-primary-fixed mt-1">2,600
+                                                                ISK</span>
+                                                </div>
+                                        </div>
+                                        <!-- Item 4: Meat & Potatoes -->
+                                        <div class="rounded-lg overflow-hidden relative group smooth-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-surface-container reveal"
+                                                style="transition-delay: 400ms;">
+                                                <img alt="Meat &amp; Potatoes"
+                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                                                        data-alt="Meat &amp; potatoes dish"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK6qUzSV06xakBm5RW-0h2Zx2bjaJHbP_8MCp5LCf4uNT_obygLf5S2IJ1JBNAOKTkvcEnsNddcwVkuhURGIx07ej3_Kn0d_jKzrlC2SYsqjn9X6QfK4OoND09Hz0xvHTQ1ggs1jxgx8AjOTP5UUqDe_9N3Ks-e9oi26UyF2DFjfCOhqf8qD8pXH7nM9S3jWa3A4vw3yaH0Tm3VOVWblCdqNrFIKeEG2pKU7AH7sUEVBJ8wKec1lQh1UG9J3YS6WOA07PsIu_yb4U_" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent flex flex-col justify-end p-margin-mobile">
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+                                                                Hearty Meals</h3>
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-primary-fixed mt-1">3,200
+                                                                ISK</span>
+                                                </div>
+                                        </div>
+                                        <!-- Item 5: Fish and Chips -->
+                                        <div class="rounded-lg overflow-hidden relative group smooth-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-surface-container reveal"
+                                                style="transition-delay: 500ms;">
+                                                <img alt="Fish and Chips"
+                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                                                        data-alt="Fish and chips"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABE-0qmy2SG1Lw4qyxzrulduaJRcRZG91Tbv3EAxobYW5SbhvxCoAjf8kgLrhvJzG7-MoaZy5n-ueCn4p7EKhXAd1qRfXQ1nNjnsGUrXNjku_SAe6ST_-VAZO90RGCrgRUEm2MDTtilq0U8NyGDyBJw3Q9qZyOFFaGErM2yVTreZncv5L8TZjg3OCTiCSyppQ_dD1SGh2IX5MGp_LSENs7SVJo4pub563sLisLQjh4F02Pz1bYysxqLyzP13u8AU5InoGYj0xPNnJJ" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent flex flex-col justify-end p-margin-mobile">
+                                                        <h3
+                                                                class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+                                                                Fish &amp; Chips</h3>
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-primary-fixed mt-1">2,900
+                                                                ISK</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Menu Categories -->
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background" id="menu">
+                        <div class="max-w-7xl mx-auto">
+                                <div class="text-center mb-margin-desktop reveal">
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-2">
+                                                Explore the Menu</h2>
+                                        <div class="h-1 w-16 bg-primary-container mx-auto mb-4"></div>
+                                        <div class="flex flex-wrap justify-center gap-4 mt-base">
+                                                <button
+                                                        class="px-6 py-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm smooth-shadow uppercase tracking-widest hover:bg-primary transition-colors">All</button>
+                                                <button
+                                                        class="px-6 py-2 rounded border border-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors uppercase tracking-widest hover:border-primary-container">Sweet
+                                                        (Dulces)</button>
+                                                <button
+                                                        class="px-6 py-2 rounded border border-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors uppercase tracking-widest hover:border-primary-container">Savory
+                                                        (Salados)</button>
+                                        </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-margin-mobile">
+                                        <!-- Sweet Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 100ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Berry Crepe"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr5VYtl-s4IQ3D6vHQnkgPMHjj9SyZ0nHLuBVaBYUrqkJ2iqq5esemKecCNG36mkmOFM4tfqRIVyWzg_TR5-uRXxSLPgC-1op7VkRvOmHeddQoYAJp8bewPu3XcyfkBZe14LECTy2vlIldD1Nu-ey2O4Rbernp66Scheyv2Ux7u-eyoA_-ZetrmAhFIc6DNqSEDtqQ8Xug0Sv3ixqZ0ADBzNgICMvzcnmT-88sRP3l47I68hxiaffV5VOx2mF3smsN1ph4Nn1EUozJ" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Berry Crepe</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Classic crepe with mixed berries and sweet drizzle.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">2,200
+                                                        ISK</span>
+                                        </div>
+                                        <!-- Sweet Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 200ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Oreo Crepe"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-QtzEpg3tXNS0g3GpOSNsIqDWPPGAjBjikjbxbRYqZpZjZBjxux0uRUka6lsxrkTH51x79KX8Gg9Cg6pDPtUH_pCZ8MAZxujbplegIym7mTLdmQ6MqqcBfP17pEggvMH3iqiVJajGDQ54wUJZi69bDZ8uA8cQ4yVSDfzJTPsEzFS4x4_p24q1sXxUPn5zzMoLOCSmXZ4Epb2MnfrihSZArmeG7NsK_FK1fPQRjj9aADpGkw8uedsH4lRGxGVTBnYAa5HZPhEeebIW" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Oreo Crepe</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Sweet crepe topped with crushed Oreos and chocolate.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">2,400
+                                                        ISK</span>
+                                        </div>
+                                        <!-- Sweet/Mixed Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 300ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Crepe Combo"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzMQsYUtOE5hG5MzQ6LduvvrIqMHvUCWpf9O7PWuyx6qrINygraERmggdZif5R3HHOSEoQZrU1g89l7Hlfp7aHA4jY_p7JUf7uvsWsyhcX-KdxAh0In4zeththwl6tvJMevKzcsw7u-1YXvpiziqWOnEAmc_-l7kqKzBMLUvX_OB_ChOb70W1wpinja-_fWL4NVHm7RWZ2nBcfl37JTpyYDj5iRB3jLaqYJujMCX4TXvP5ezRsmVOf40wHQ73BkFHGBaKGrmPlhxzp" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Combo Special</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Sweet crepe and savory French taco combo.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">3,800
+                                                        ISK</span>
+                                        </div>
+                                        <!-- Sweet Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 400ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Oreo Rolls"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVqedKFG_RPuiPL8bbr-0vbXtz6nvqoaT2u-XqDAJ-oCbZ0JACVTpfBFc0VY6SEvrX1Ayo3iSOdXJq4r136hcXuOaPRdeIGiky1zWUurB5wAMRlqGN8hmdjeSe_VluMIk16kYcIXTq3S6QxmkJK8ZTgTfNCUhKlcIWuL36N-ekUfjAdhlzdjm-2p0SGX_U7v1cArqdKFIazgFTZp6D4AVPtiz1P-QMCxkgNDJtCzZY4uEoQ-V93sXEkygRwVeVbRNVqSZuUep9mU82" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Oreo Rolls</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Sweet rolled crepes with Oreo filling.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">2,200
+                                                        ISK</span>
+                                        </div>
+                                        <!-- Savory Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 500ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Gratinated Crepe"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbz5L8JX4nsfOa50aIvZf2nZT0tZ57bgptGe-U6jngYfuokXCw7wEwXbLkgFCnmYndgJw_QqzOiNAOuA1CD9hOBchY8OO9ciHKN_okN4vaju1Rx0ke8d7-ZTsTMOZPkD1b3pZ1Co_qT4aq97-s-7Buwt_du0PNCXEk_NjDrMni_Vt6p2bNf1wgBBJxBkenHONkouczhHq31YnFEC4Dlh9TELlnh0ny01mpuQC0uaRRUh6GJkGxWMtPCEWRhMQBpioYFcSyxBCiUiZ" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Gratinated Crepe</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Savory crepe topped with melted cheese.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">2,600
+                                                        ISK</span>
+                                        </div>
+                                        <!-- Savory Item -->
+                                        <div class="flex gap-4 items-start border-b border-surface-container-high pb-4 group hover:bg-surface-container/30 p-2 rounded-lg transition-all duration-300 reveal"
+                                                style="transition-delay: 600ms;">
+                                                <div
+                                                        class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 smooth-shadow group-hover:shadow-lg transition-all duration-300">
+                                                        <img alt="Galette"
+                                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPP6VuohPHYm0j148ncxoIanQxvCtZVA-FyouIkxRuK08o2KkrcHZINtwIzBbElXrmY4rVfP4OsYkRzHllzrh7vxqmIE2vPKjw3eWqTb3bEAdWjKx9xAtwebjA-2HdoGjCUQNcMFKnCU7Ydua5XHS-kCqlcGpFl6zoQp2W-gBTxPKuaYvcJWULjgIp0HC93Ze80B9ZWdOILMdsHJd0h--N2IbKSfZoBUnHTFB5U519UBbAYild67tYzxHiNXo2HGMcCUy80u5NmAeF" />
+                                                </div>
+                                                <div class="flex-grow">
+                                                        <h4
+                                                                class="font-headline-lg-mobile text-[20px] text-on-background group-hover:text-primary-container transition-colors">
+                                                                Classic Galette</h4>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                Savory buckwheat crepe with egg and cheese.</p>
+                                                </div>
+                                                <span
+                                                        class="font-label-sm text-label-sm text-primary-fixed whitespace-nowrap ml-4 bg-surface-container px-3 py-1 rounded">2,400
+                                                        ISK</span>
+                                        </div>
+                                </div>
+                                <div class="text-center mt-margin-desktop reveal">
+                                        <a class="inline-block border border-primary-container text-primary-container px-8 py-4 rounded font-label-sm text-label-sm hover:bg-primary-container/10 transition-colors duration-200 uppercase tracking-widest"
+                                                href="#">
+                                                View Full Menu PDF
+                                        </a>
+                                </div>
+                        </div>
+                </section>
+                <!-- Reviews Section -->
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container" id="reviews">
+                        <div class="max-w-7xl mx-auto">
+                                <div class="text-center mb-margin-desktop reveal">
+                                        <div class="flex items-center justify-center gap-2 mb-2 text-primary-container">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                        </div>
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">
+                                                4.7 Stars</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Based on 43 happy
+                                                reviews</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                                        <!-- Review Card -->
+                                        <div class="bg-surface-container-highest p-margin-mobile rounded-lg smooth-shadow border border-surface-container-high hover:border-primary-container/50 transition-colors reveal"
+                                                style="transition-delay: 100ms;">
+                                                <div
+                                                        class="flex items-center gap-2 mb-4 text-primary-container text-sm">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-background italic mb-4">
+                                                        "Best pancakes I’ve ever had in Reykjavík. The portions are huge
+                                                        and the staff is incredibly friendly."</p>
+                                                <p class="font-label-sm text-label-sm text-primary-fixed">- Anna K.</p>
+                                        </div>
+                                        <!-- Review Card -->
+                                        <div class="bg-surface-container-highest p-margin-mobile rounded-lg smooth-shadow border border-surface-container-high hover:border-primary-container/50 transition-colors reveal"
+                                                style="transition-delay: 200ms;">
+                                                <div
+                                                        class="flex items-center gap-2 mb-4 text-primary-container text-sm">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-background italic mb-4">
+                                                        "Delicious food and very generous portions. The pulled pork
+                                                        tacos were a major highlight. Will definitely be back."</p>
+                                                <p class="font-label-sm text-label-sm text-primary-fixed">- Sigurður J.
+                                                </p>
+                                        </div>
+                                        <!-- Review Card -->
+                                        <div class="bg-surface-container-highest p-margin-mobile rounded-lg smooth-shadow border border-surface-container-high hover:border-primary-container/50 transition-colors reveal"
+                                                style="transition-delay: 300ms;">
+                                                <div
+                                                        class="flex items-center gap-2 mb-4 text-primary-container text-sm">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star</span>
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1; font-size: 18px;">star_half</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-background italic mb-4">
+                                                        "Freshly made, full of flavor, and great value for money.
+                                                        Perfect spot for a quick, satisfying lunch in Borgartún."</p>
+                                                <p class="font-label-sm text-label-sm text-primary-fixed">- Maria S.</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Location & Hours Section -->
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background" id="contact">
+                        <div
+                                class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter bg-surface-container-low rounded-lg overflow-hidden smooth-shadow border border-surface-container-high reveal">
+                                <div class="p-margin-mobile md:p-margin-desktop flex flex-col justify-center">
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-base">
+                                                Find Us</h2>
+                                        <div class="h-1 w-16 bg-primary-container mb-margin-mobile"></div>
+                                        <div class="space-y-6">
+                                                <div class="flex items-start gap-4">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary-container mt-1">location_on</span>
+                                                        <div>
+                                                                <h4
+                                                                        class="font-label-sm text-label-sm text-on-background uppercase tracking-widest">
+                                                                        Address</h4>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                        Borgartún 29<br />105 Reykjavík</p>
+                                                        </div>
+                                                </div>
+                                                <div class="flex items-start gap-4">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary-container mt-1">schedule</span>
+                                                        <div>
+                                                                <h4
+                                                                        class="font-label-sm text-label-sm text-on-background uppercase tracking-widest">
+                                                                        Opening Hours</h4>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant mt-1">
+                                                                        Open daily until 21:00</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="flex flex-wrap gap-4 mt-margin-desktop">
+                                                <a class="flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded font-label-sm text-label-sm hover:bg-primary transition-colors uppercase tracking-widest"
+                                                        href="#">
+                                                        <span class="material-symbols-outlined text-sm">map</span>
+                                                        Google Maps
+                                                </a>
+                                                <a class="flex items-center gap-2 border border-primary-container text-primary-container px-6 py-3 rounded font-label-sm text-label-sm hover:bg-primary-container/10 transition-colors uppercase tracking-widest"
+                                                        href="tel:4156480">
+                                                        <span class="material-symbols-outlined text-sm">call</span>
+                                                        415 6480
+                                                </a>
+                                        </div>
+                                </div>
+                                <div
+                                        class="h-[400px] md:h-auto bg-surface-dim relative border-l border-surface-container-high">
+                                        <!-- Placeholder for Map, using requested data-location -->
+                                        <div class="w-full h-full bg-surface-container flex items-center justify-center text-primary-container/50"
+                                                data-location="Reykjavík, Iceland">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-size: 48px;">map</span>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+        <!-- Footer -->
+        <footer
+                class="bg-surface-container-lowest border-t border-primary-container/20 w-full py-margin-desktop reveal">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto items-center">
+                        <div class="flex flex-col gap-4 items-start">
+                                <a class="h-16 w-40 overflow-hidden relative flex items-center mb-2" href="#">
+                                        <img alt="Andrez Logo" class="h-16 w-auto object-contain"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7mjDuiZIjD7_x-oYFXPbLbdQ9DjdJWAc5K9CjY22MQtZqasAFkouhUg2epQpxo0n6MEMBM-W0Ha85LuX0k-GFyKXHGCdmCQLa3saiXKx4cTaMuasIA-Et5LBZrYV4dBYRjjDabxUrAQbIftiHQX-1WTC-ppjYZUlq4b0nqnvrMTwXLecx_n_ia7YZkdPs8w68k_d5GpVpVuI2-9s0EVa6uwT5QK6ExX9MH86aXQ0dy-qLlhqcuXm63D-73eZTstpy0-CJGBEf3kkb" />
+                                </a>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 Andrez
+                                        Reykjavík.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="#">Wolt Store</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="#">Borgartún 29</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="#">Phone: 415 6480</a>
+                        </div>
+                        <div class="flex flex-col gap-2 md:items-end">
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="#">Facebook</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="#">Instagram</a>
+                        </div>
+                </div>
+        </footer>
+        <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                        const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                                entry.target.classList.add('reveal-active');
+                                        }
+                                });
+                        }, {
+                                threshold: 0.1,
+                                rootMargin: "0px 0px -50px 0px"
+                        });
+
+                        document.querySelectorAll('.reveal').forEach((el) => {
+                                observer.observe(el);
+                        });
+                });
+        </script>
+</body>
+
+</html>
