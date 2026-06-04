@@ -150,34 +150,58 @@ function initObserver() {
 // Mobile menu toggle
 function initMobileMenu() {
         const menuBtn = document.getElementById('mobile-menu-btn');
-        const dropdown = document.getElementById('mobile-dropdown');
+        const sidebar = document.getElementById('mobile-sidebar');
+        const overlay = document.getElementById('mobile-sidebar-overlay');
         const icon = document.getElementById('hamburger-icon');
 
-        if (!menuBtn || !dropdown || !icon) return;
+        if (!menuBtn || !sidebar || !overlay || !icon) return;
 
-        menuBtn.addEventListener('click', () => {
-                const isOpen = dropdown.classList.contains('open');
+        function toggleMenu() {
+                const isOpen = sidebar.classList.contains('open');
                 if (!isOpen) {
-                        dropdown.classList.add('open');
+                        sidebar.classList.add('open');
+                        overlay.classList.add('open');
+                        menuBtn.classList.add('menu-open');
                         icon.textContent = 'close';
                 } else {
-                        dropdown.classList.remove('open');
+                        sidebar.classList.remove('open');
+                        overlay.classList.remove('open');
+                        menuBtn.classList.remove('menu-open');
                         icon.textContent = 'menu';
                 }
-        });
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
 
         // Close dropdown when a link is clicked
-        dropdown.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                        dropdown.classList.remove('open');
-                        icon.textContent = 'menu';
-                });
+        sidebar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', toggleMenu);
         });
+}
+
+// Transparent navbar scroll glassmorphism
+function initNavbarScroll() {
+        const nav = document.querySelector('nav');
+        if (!nav) return;
+
+        function handleScroll() {
+                if (window.scrollY > 50) {
+                        nav.classList.add('scrolled');
+                } else {
+                        nav.classList.remove('scrolled');
+                }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        // Call once on init to handle reload in scrolled position
+        handleScroll();
 }
 
 function init() {
         initObserver();
         initMobileMenu();
+        initNavbarScroll();
 }
 
 if (document.readyState === 'loading') {

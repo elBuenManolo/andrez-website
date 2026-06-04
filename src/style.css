@@ -50,17 +50,31 @@
         transform: translateY(0);
 }
 
-/* Mobile dropdown panel smooth transition */
-#mobile-dropdown {
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, opacity 0.25s ease-in-out;
+/* Mobile sidebar menu */
+#mobile-sidebar {
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#mobile-dropdown.open {
-        max-height: 400px; /* high enough to contain all links */
+#mobile-sidebar.open {
+        transform: translateX(0);
+}
+
+/* Mobile sidebar overlay */
+#mobile-sidebar-overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+}
+
+#mobile-sidebar-overlay.open {
         opacity: 1;
+        pointer-events: auto;
+}
+
+/* Mobile menu button style when open */
+#mobile-menu-btn.menu-open {
+        color: #e4e2e1 !important;
 }
 
 /* Animated hover underline for nav links */
@@ -72,10 +86,10 @@
 .nav-link::after {
         content: '';
         position: absolute;
-        width: 100%;
+        width: calc(100% - 32px); /* matches horizontal padding of px-4 (16px left + 16px right) */
         height: 2px;
         bottom: -2px;
-        left: 0;
+        left: 16px; /* offsets padding to center the line */
         background-color: #ffba20; /* primary-container color from our theme */
         transform: scaleX(0);
         transform-origin: bottom right;
@@ -86,4 +100,100 @@
 .nav-link.active::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+}
+
+/* New Hero Styles */
+.hero-bg-text {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: clamp(3.5rem, 13vw, 11rem);
+        line-height: 0.8;
+        letter-spacing: -0.05em;
+        font-weight: 900;
+}
+
+@keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+        animation: float 5s ease-in-out infinite;
+}
+
+/* Transparent navbar scroll effect */
+nav.scrolled {
+        background-color: rgba(19, 19, 19, 0.9) !important;
+        backdrop-filter: blur(12px) !important;
+        border-bottom: 1px solid rgba(255, 186, 32, 0.1) !important;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Tilted Stacked Photo Placeholders */
+.photo-stack {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@media (min-width: 1024px) {
+        .photo-stack {
+                height: 400px;
+        }
+}
+
+.photo-card {
+        position: absolute;
+        width: 190px;
+        height: 142px;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 4px solid #2a2a2a;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s, z-index 0.1s;
+}
+
+@media (min-width: 768px) {
+        .photo-card {
+                width: 300px;
+                height: 225px;
+                border-width: 5px;
+        }
+}
+
+.photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.photo-card:hover {
+        border-color: #ffba20;
+        z-index: 30 !important;
+        transform: scale(1.15) rotate(0deg) !important;
+}
+
+.photo-card-1 {
+        top: 10%;
+        left: 10%;
+        transform: rotate(-10deg) translate(0, 0);
+        z-index: 10;
+}
+
+.photo-card-2 {
+        bottom: 10%;
+        right: 10%;
+        transform: rotate(8deg) translate(0, 0);
+        z-index: 20;
+}
+
+/* Spread apart slightly on parent hover when not individually hovered */
+.photo-stack:hover .photo-card-1:not(:hover) {
+        transform: rotate(-16deg) translate(-25px, -15px);
+}
+
+.photo-stack:hover .photo-card-2:not(:hover) {
+        transform: rotate(14deg) translate(25px, 15px);
 }
