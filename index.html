@@ -175,12 +175,20 @@
                                                         </div>
 
                                                         <!-- Tap Me!! Indicator -->
-                                                        <div class="absolute -top-2 right-2 md:-top-6 md:right-6 z-30 pointer-events-none flex flex-col items-center rotate-12">
-                                                                <span class="bg-primary-container text-black font-bold text-xs md:text-sm px-3 py-1.5 rounded-full border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] whitespace-nowrap animate-bounce">
-                                                                        Tap Me!!
+                                                        <div
+                                                                class="absolute -top-2 right-2 md:-top-6 md:right-6 z-30 pointer-events-none flex flex-col items-center rotate-12">
+                                                                <span
+                                                                        class="bg-primary-container text-black font-bold text-xs md:text-sm px-3 py-1.5 rounded-full border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)] whitespace-nowrap animate-bounce">
+                                                                        <span class="md:hidden">Tap Me!!</span>
+                                                                        <span class="hidden md:inline">Hover Me!!</span>
                                                                 </span>
-                                                                <svg class="w-6 h-6 md:w-8 md:h-8 text-primary-container mt-1 transform -rotate-[40deg] drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                                                <svg class="w-6 h-6 md:w-8 md:h-8 text-primary-container mt-1 transform -rotate-[40deg] drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="3" viewBox="0 0 24 24"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                                                                 </svg>
                                                         </div>
                                                 </div>
@@ -546,56 +554,97 @@
                                 </div>
                         </div>
                 </section>
-                <!-- Location & Hours Section -->
-                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background" id="contact">
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-black" id="contact">
                         <div
-                                class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter bg-surface-container-low rounded-lg overflow-hidden smooth-shadow border border-surface-container-high reveal">
-                                <div class="p-margin-mobile md:p-margin-desktop flex flex-col justify-center">
+                                class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter bg-black rounded-none overflow-hidden smooth-shadow reveal">
+                                <div class="p-margin-mobile md:p-margin-desktop flex flex-col justify-center bg-black">
                                         <h2
-                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-base">
-                                                Find Us</h2>
+                                                class="font-headline-lg-mobile md:font-montserrat-lg text-montserrat    -lg-mobile md:text-montserrat-lg text-on-background mb-base">
+                                                Your Route to Andrez</h2>
                                         <div class="h-1 w-16 bg-primary-container mb-margin-mobile"></div>
-                                        <div class="space-y-6">
-                                                <div class="flex items-start gap-4">
+
+                                        <!-- Itinerary Path -->
+                                        <div
+                                                class="relative pl-8 border-l-2 border-dashed border-neutral-800 space-y-8 ml-3 my-6">
+                                                <!-- Step 1 -->
+                                                <div class="relative">
+                                                        <!-- Dot indicator -->
                                                         <span
-                                                                class="material-symbols-outlined text-primary-container mt-1">location_on</span>
-                                                        <div>
-                                                                <h4
-                                                                        class="font-label-sm text-label-sm text-on-background uppercase tracking-widest">
-                                                                        Address</h4>
-                                                                <p
-                                                                        class="font-body-md text-body-md text-on-surface-variant mt-1">
-                                                                        Borgartún 29<br />105 Reykjavík</p>
-                                                        </div>
+                                                                class="absolute -left-[43px] top-0.5 flex items-center justify-center w-7 h-7 rounded-full bg-primary-container text-black font-bold text-xs shadow-md border-2 border-black">
+                                                                1
+                                                        </span>
+                                                        <h4
+                                                                class="font-label-sm text-[11px] text-primary-container uppercase tracking-wider font-bold">
+                                                                Departure
+                                                        </h4>
+                                                        <p
+                                                                class="font-body-md text-[16px] text-on-background mt-0.5 font-semibold">
+                                                                Your Location in Reykjavík
+                                                        </p>
+                                                        <p class="text-sm text-on-surface-variant mt-0.5">
+                                                                Prepare your appetite for authentic French tacos and
+                                                                crepes.
+                                                        </p>
                                                 </div>
-                                                <div class="flex items-start gap-4">
+
+                                                <!-- Step 2 -->
+                                                <div class="relative">
+                                                        <!-- Dot indicator -->
                                                         <span
-                                                                class="material-symbols-outlined text-primary-container mt-1">schedule</span>
-                                                        <div>
-                                                                <h4
-                                                                        class="font-label-sm text-label-sm text-on-background uppercase tracking-widest">
-                                                                        Opening Hours</h4>
-                                                                <p
-                                                                        class="font-body-md text-body-md text-on-surface-variant mt-1">
-                                                                        Open daily until 21:00</p>
-                                                        </div>
+                                                                class="absolute -left-[43px] top-0.5 flex items-center justify-center w-7 h-7 rounded-full bg-neutral-900 text-neutral-400 border-2 border-neutral-700 font-bold text-xs shadow-md">
+                                                                2
+                                                        </span>
+                                                        <h4
+                                                                class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider font-bold">
+                                                                Timing Check
+                                                        </h4>
+                                                        <p
+                                                                class="font-body-md text-[16px] text-on-background mt-0.5 font-semibold">
+                                                                Open Daily Until 21:00
+                                                        </p>
+                                                        <p class="text-sm text-on-surface-variant mt-0.5">
+                                                                Open every day to satisfy your cravings for lunch,
+                                                                dinner, or late snacks.
+                                                        </p>
+                                                </div>
+
+                                                <!-- Step 3 -->
+                                                <div class="relative">
+                                                        <!-- Dot indicator -->
+                                                        <span
+                                                                class="absolute -left-[43px] top-0.5 flex items-center justify-center w-7 h-7 rounded-full bg-primary-container text-black font-bold text-xs shadow-md border-2 border-black">
+                                                                3
+                                                        </span>
+                                                        <h4
+                                                                class="font-label-sm text-[11px] text-primary-container uppercase tracking-wider font-bold">
+                                                                Destination Reach
+                                                        </h4>
+                                                        <p
+                                                                class="font-body-md text-[16px] text-on-background mt-0.5 font-semibold">
+                                                                Borgartún 29, 105 Reykjavík
+                                                        </p>
+                                                        <p class="text-sm text-on-surface-variant mt-0.5">
+                                                                Arrive at Andrez! Sit back and enjoy the best food
+                                                                experience.
+                                                        </p>
                                                 </div>
                                         </div>
-                                        <div class="flex flex-wrap gap-4 mt-margin-desktop">
-                                                <a class="flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded font-label-sm text-label-sm hover:bg-primary transition-colors uppercase tracking-widest"
-                                                        href="#">
+
+                                        <div class="flex flex-wrap gap-4 mt-4">
+                                                <a class="flex items-center gap-2 bg-primary-container text-black px-6 py-3 rounded-full font-label-sm text-label-sm hover:bg-primary transition-all duration-200 uppercase tracking-widest font-bold border-2 border-black"
+                                                        href="https://maps.app.goo.gl/KH9D7vbmQKSd7YmFA">
                                                         <span class="material-symbols-outlined text-sm">map</span>
-                                                        Google Maps
+                                                        Open Navigation
                                                 </a>
-                                                <a class="flex items-center gap-2 border border-primary-container text-primary-container px-6 py-3 rounded font-label-sm text-label-sm hover:bg-primary-container/10 transition-colors uppercase tracking-widest"
+                                                <a class="flex items-center gap-2 border border-neutral-700 text-on-background px-6 py-3 rounded-full font-label-sm text-label-sm hover:bg-neutral-900 transition-all duration-200 uppercase tracking-widest font-semibold"
                                                         href="tel:4156480">
                                                         <span class="material-symbols-outlined text-sm">call</span>
-                                                        415 6480
+                                                        Call +354 415 6480
                                                 </a>
                                         </div>
                                 </div>
                                 <div
-                                        class="h-[400px] md:h-auto bg-surface-dim relative border-t md:border-t-0 md:border-l border-surface-container-high overflow-hidden">
+                                        class="h-[400px] md:h-auto bg-neutral-950 relative border-t md:border-t-0 md:border-l border-neutral-800 overflow-hidden">
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15105.018551466423!2d-21.91199849055314!3d64.14231651865197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d675972337cb91%3A0x606d0be93c12038!2sAndrez!5e1!3m2!1sen!2ses!4v1780617115895!5m2!1sen!2ses"
                                                 width="100%" height="100%" style="border:0;" allowfullscreen=""
                                                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -625,11 +674,22 @@
                                 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
                                         href="#">Phone: 415 6480</a>
                         </div>
-                        <div class="flex flex-col gap-2 items-center md:items-end text-center md:text-right">
-                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
-                                        href="#">Facebook</a>
-                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
-                                        href="#">Instagram</a>
+                        <div class="flex flex-col gap-3 items-center md:items-end text-center md:text-right">
+                                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold">Follow us on:</span>
+                                <div class="flex items-center gap-4">
+                                        <a class="text-on-surface-variant hover:text-primary-container transition-all duration-200 hover:scale-110"
+                                                href="https://www.facebook.com/people/Andrez/61582365021648/" aria-label="Facebook">
+                                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 8H7v3h2v9h4v-9h3.6l.4-3h-4V6.5C13 5.3 13.7 5 14.5 5H16V2h-3C10.5 2 9 3.5 9 6v2z"/>
+                                                </svg>
+                                        </a>
+                                        <a class="text-on-surface-variant hover:text-primary-container transition-all duration-200 hover:scale-110"
+                                                href="https://www.instagram.com/andrezrvk" aria-label="Instagram">
+                                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                                </svg>
+                                        </a>
+                                </div>
                         </div>
                 </div>
         </footer>
