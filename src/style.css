@@ -205,3 +205,36 @@
 .photo-stack:hover .photo-card-3:not(:hover) {
         transform: rotate(16deg) translate(35px, 20px);
 }
+
+/* Shiny Gold Text style with animated metallic texture */
+.gold-text-shiny {
+        background: linear-gradient(
+                135deg,
+                #bf953f 0%,
+                #fcf6ba 25%,
+                #b38728 50%,
+                #fbf5b7 75%,
+                #aa771c 100%
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: inline-block;
+        text-shadow: none;
+        filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5));
+        animation: goldShine 5s linear infinite;
+}
+
+@keyframes goldShine {
+        0% {
+                background-position: 0% 50%;
+        }
+        50% {
+                background-position: 100% 50%;
+        }
+        100% {
+                background-position: 0% 50%;
+        }
+}
