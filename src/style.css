@@ -168,29 +168,40 @@
 }
 
 .photo-card:hover {
-        z-index: 30 !important;
+        z-index: 40 !important;
         transform: scale(1.15) rotate(0deg) !important;
 }
 
 .photo-card-1 {
-        top: 10%;
-        left: 10%;
-        transform: rotate(-10deg) translate(0, 0);
+        top: 8%;
+        left: 5%;
+        transform: rotate(-12deg) translate(0, 0);
         z-index: 10;
 }
 
 .photo-card-2 {
-        bottom: 10%;
-        right: 10%;
-        transform: rotate(8deg) translate(0, 0);
+        top: 15%;
+        left: 22%;
+        transform: rotate(3deg) translate(0, 0);
         z-index: 20;
+}
+
+.photo-card-3 {
+        bottom: 8%;
+        right: 5%;
+        transform: rotate(10deg) translate(0, 0);
+        z-index: 30;
 }
 
 /* Spread apart slightly on parent hover when not individually hovered */
 .photo-stack:hover .photo-card-1:not(:hover) {
-        transform: rotate(-16deg) translate(-25px, -15px);
+        transform: rotate(-18deg) translate(-35px, -20px);
 }
 
 .photo-stack:hover .photo-card-2:not(:hover) {
-        transform: rotate(14deg) translate(25px, 15px);
+        transform: rotate(-2deg) translate(-5px, -10px);
+}
+
+.photo-stack:hover .photo-card-3:not(:hover) {
+        transform: rotate(16deg) translate(35px, 20px);
 }
