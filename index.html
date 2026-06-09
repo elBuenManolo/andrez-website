@@ -22,7 +22,8 @@
 
 <body class="bg-background text-on-background font-body-md antialiased">
         <!-- Navigation -->
-        <nav class="fixed top-0 w-full z-50 bg-transparent border-none shadow-none transition-all duration-300">
+        <nav
+                class="fixed top-0 w-full z-50 bg-[#e89e1b] border-none shadow-[0_10px_30px_rgba(232,158,27,0.4)] transition-all duration-300">
                 <div
                         class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-7xl mx-auto w-full">
                         <a class="h-14 w-32 overflow-hidden relative flex items-center" href="#">
@@ -42,7 +43,7 @@
                         </div>
                         <!-- Desktop CTA -->
                         <div class="hidden md:flex items-center gap-3">
-                                <a class="bg-black text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-black transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold border-2 border-white flex items-center gap-2"
+                                <a class="bg-black text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-black transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold flex items-center gap-2"
                                         href="https://maps.app.goo.gl/KH9D7vbmQKSd7YmFA">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                                 width="18" height="18">
@@ -52,7 +53,7 @@
                                         </svg>
                                         Find Us
                                 </a>
-                                <a class="bg-black text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-black transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold border-2 border-white flex items-center gap-2"
+                                <a class="bg-black text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-black transition-all duration-200 hover:scale-105 active:scale-95 uppercase tracking-widest font-bold flex items-center gap-2"
                                         href="https://wolt.com/en/isl/reykjavik/restaurant/andrezrvk">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 95 150 110" width="22"
                                                 height="16">
@@ -65,8 +66,7 @@
                         </div>
                         <!-- Mobile Hamburger Button -->
                         <button id="mobile-menu-btn"
-                                class="md:hidden text-on-background focus:outline-none flex items-start justify-end fixed top-0 right-0 z-[60] bg-black w-20 h-20 pt-3 pr-3 transition-opacity duration-300"
-                                style="clip-path: polygon(0 0, 100% 0, 100% 100%);">
+                                class="md:hidden text-black focus:outline-none flex items-center justify-center absolute right-[20px] top-1/2 -translate-y-1/2 z-[60] bg-transparent transition-opacity duration-300">
                                 <span class="material-symbols-outlined text-3xl" id="hamburger-icon">menu</span>
                         </button>
                 </div>
@@ -149,56 +149,14 @@
                                                 <div class="flex items-center flex-wrap gap-x-3 gap-y-1 text-on-background/90"
                                                         style="font-family: 'Merriweather', serif;">
                                                         <span class="text-sm font-semibold tracking-wide italic">Google
-                                                                Rating: <span
+                                                                Rating: <span id="hero-rating-num"
                                                                         class="font-bold text-[#ffba20]">4.7</span>
                                                                 stars</span>
-                                                        <div class="flex items-center gap-0.5">
-                                                                <!-- Star 1 -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" fill="#ffba20"
-                                                                        class="w-5 h-5">
-                                                                        <path
-                                                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                                </svg>
-                                                                <!-- Star 2 -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" fill="#ffba20"
-                                                                        class="w-5 h-5">
-                                                                        <path
-                                                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                                </svg>
-                                                                <!-- Star 3 -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" fill="#ffba20"
-                                                                        class="w-5 h-5">
-                                                                        <path
-                                                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                                </svg>
-                                                                <!-- Star 4 -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" fill="#ffba20"
-                                                                        class="w-5 h-5">
-                                                                        <path
-                                                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                                </svg>
-                                                                <!-- Star 5 (70% Filled) -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" class="w-5 h-5">
-                                                                        <defs>
-                                                                                <linearGradient id="partial-star-grad"
-                                                                                        x1="0%" y1="0%" x2="100%"
-                                                                                        y2="0%">
-                                                                                        <stop offset="70%"
-                                                                                                stop-color="#ffba20" />
-                                                                                        <stop offset="70%"
-                                                                                                stop-color="#4a4a4a" />
-                                                                                </linearGradient>
-                                                                        </defs>
-                                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                                                                                fill="url(#partial-star-grad)" />
-                                                                </svg>
+                                                        <div id="hero-stars-container"
+                                                                class="flex items-center gap-0.5">
+                                                                <!-- Stars loaded dynamically -->
                                                         </div>
-                                                        <span
+                                                        <span id="hero-reviews-count"
                                                                 class="text-xs text-on-surface-variant font-medium tracking-wide">(+50
                                                                 reviews)</span>
                                                 </div>
@@ -280,13 +238,342 @@
                                 </div>
                         </div>
                 </section>
-                <!-- About Section -->
-                <section class="relative py-48 md:py-80 min-h-[400px] md:min-h-[600px] overflow-hidden" id="about">
-                        <!-- Wood Background -->
-                        <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
-                                <img src="/madera.png" alt="Wood background" class="w-full h-full object-cover" />
+
+                <!-- Slanted Product Carousel Section -->
+                <section class="relative py-6 md:py-8 bg-[#e89e1b] overflow-hidden -rotate-1.5 z-20 w-full border-none">
+                        <!-- Content wrapper rotated back to keep images and text straight -->
+                        <div class="rotate-1.5 scale-[1.03] w-full">
+                                <div class="marquee-container overflow-hidden flex whitespace-nowrap gap-6">
+                                        <div class="flex gap-6 animate-marquee shrink-0">
+                                                <!-- Card 1 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="/hero-taco-placeholder.png" alt="French Tacos"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        French Tacos</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Stuffed & Grilled</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 2 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr5VYtl-s4IQ3D6vHQnkgPMHjj9SyZ0nHLuBVaBYUrqkJ2iqq5esemKecCNG36mkmOFM4tfqRIVyWzg_TR5-uRXxSLPgC-1op7VkRvOmHeddQoYAJp8bewPu3XcyfkBZe14LECTy2vlIldD1Nu-ey2O4Rbernp66Scheyv2Ux7u-eyoA_-ZetrmAhFIc6DNqSEDtqQ8Xug0Sv3ixqZ0ADBzNgICMvzcnmT-88sRP3l47I68hxiaffV5VOx2mF3smsN1ph4Nn1EUozJ"
+                                                                        alt="Sweet Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Sweet Crepes</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Nutella & Berries</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 3 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPP6VuohPHYm0j148ncxoIanQxvCtZVA-FyouIkxRuK08o2KkrcHZINtwIzBbElXrmY4rVfP4OsYkRzHllzrh7vxqmIE2vPKjw3eWqTb3bEAdWjKx9xAtwebjA-2HdoGjCUQNcMFKnCU7Ydua5XHS-kCqlcGpFl6zoQp2W-gBTxPKuaYvcJWULjgIp0HC93Ze80B9ZWdOILMdsHJd0h--N2IbKSfZoBUnHTFB5U519UBbAYild67tYzxHiNXo2HGMcCUy80u5NmAeF"
+                                                                        alt="Savory Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Savory Crepes</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Ham & Cheese</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 4 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABE-0qmy2SG1Lw4qyxzrulduaJRcRZG91Tbv3EAxobYW5SbhvxCoAjf8kgLrhvJzG7-MoaZy5n-ueCn4p7EKhXAd1qRfXQ1nNjnsGUrXNjku_SAe6ST_-VAZO90RGCrgRUEm2MDTtilq0U8NyGDyBJw3Q9qZyOFFaGErM2yVTreZncv5L8TZjg3OCTiCSyppQ_dD1SGh2IX5MGp_LSENs7SVJo4pub563sLisLQjh4F02Pz1bYysxqLyzP13u8AU5InoGYj0xPNnJJ"
+                                                                        alt="Fish & Chips"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Fish & Chips</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Icelandic Freshness</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 5 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="/hero-crepe-placeholder.png" alt="Oreo Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Sweet Rolls</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Oreo & Chocolate</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 6 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK6qUzSV06xakBm5RW-0h2Zx2bjaJHbP_8MCp5LCf4uNT_obygLf5S2IJ1JBNAOKTkvcEnsNddcwVkuhURGIx07ej3_Kn0d_jKzrlC2SYsqjn9X6QfK4OoND09Hz0xvHTQ1ggs1jxgx8AjOTP5UUqDe_9N3Ks-e9oi26UyF2DFjfCOhqf8qD8pXH7nM9S3jWa3A4vw3yaH0Tm3VOVWblCdqNrFIKeEG2pKU7AH7sUEVBJ8wKec1lQh1UG9J3YS6WOA07PsIu_yb4U_"
+                                                                        alt="Hearty Meals"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Hearty Meals</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Meat & Potatoes</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- Duplicate track for seamless infinite scrolling -->
+                                        <div class="flex gap-6 animate-marquee shrink-0" aria-hidden="true">
+                                                <!-- Card 1 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="/hero-taco-placeholder.png" alt="French Tacos"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        French Tacos</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Stuffed & Grilled</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 2 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr5VYtl-s4IQ3D6vHQnkgPMHjj9SyZ0nHLuBVaBYUrqkJ2iqq5esemKecCNG36mkmOFM4tfqRIVyWzg_TR5-uRXxSLPgC-1op7VkRvOmHeddQoYAJp8bewPu3XcyfkBZe14LECTy2vlIldD1Nu-ey2O4Rbernp66Scheyv2Ux7u-eyoA_-ZetrmAhFIc6DNqSEDtqQ8Xug0Sv3ixqZ0ADBzNgICMvzcnmT-88sRP3l47I68hxiaffV5VOx2mF3smsN1ph4Nn1EUozJ"
+                                                                        alt="Sweet Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Sweet Crepes</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Nutella & Berries</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 3 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPP6VuohPHYm0j148ncxoIanQxvCtZVA-FyouIkxRuK08o2KkrcHZINtwIzBbElXrmY4rVfP4OsYkRzHllzrh7vxqmIE2vPKjw3eWqTb3bEAdWjKx9xAtwebjA-2HdoGjCUQNcMFKnCU7Ydua5XHS-kCqlcGpFl6zoQp2W-gBTxPKuaYvcJWULjgIp0HC93Ze80B9ZWdOILMdsHJd0h--N2IbKSfZoBUnHTFB5U519UBbAYild67tYzxHiNXo2HGMcCUy80u5NmAeF"
+                                                                        alt="Savory Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Savory Crepes</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Ham & Cheese</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 4 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABE-0qmy2SG1Lw4qyxzrulduaJRcRZG91Tbv3EAxobYW5SbhvxCoAjf8kgLrhvJzG7-MoaZy5n-ueCn4p7EKhXAd1qRfXQ1nNjnsGUrXNjku_SAe6ST_-VAZO90RGCrgRUEm2MDTtilq0U8NyGDyBJw3Q9qZyOFFaGErM2yVTreZncv5L8TZjg3OCTiCSyppQ_dD1SGh2IX5MGp_LSENs7SVJo4pub563sLisLQjh4F02Pz1bYysxqLyzP13u8AU5InoGYj0xPNnJJ"
+                                                                        alt="Fish & Chips"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Fish & Chips</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Icelandic Freshness</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 5 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="/hero-crepe-placeholder.png" alt="Oreo Crepes"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Sweet Rolls</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Oreo & Chocolate</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Card 6 -->
+                                                <div class="flex-shrink-0 flex flex-col items-center w-40 group/card">
+                                                        <div class="w-40 h-40 rounded-xl overflow-hidden">
+                                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK6qUzSV06xakBm5RW-0h2Zx2bjaJHbP_8MCp5LCf4uNT_obygLf5S2IJ1JBNAOKTkvcEnsNddcwVkuhURGIx07ej3_Kn0d_jKzrlC2SYsqjn9X6QfK4OoND09Hz0xvHTQ1ggs1jxgx8AjOTP5UUqDe_9N3Ks-e9oi26UyF2DFjfCOhqf8qD8pXH7nM9S3jWa3A4vw3yaH0Tm3VOVWblCdqNrFIKeEG2pKU7AH7sUEVBJ8wKec1lQh1UG9J3YS6WOA07PsIu_yb4U_"
+                                                                        alt="Hearty Meals"
+                                                                        class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500" />
+                                                        </div>
+                                                        <div class="mt-2.5 text-center">
+                                                                <h4
+                                                                        class="text-black font-black text-xs tracking-wider uppercase font-sans">
+                                                                        Hearty Meals</h4>
+                                                                <p
+                                                                        class="text-black/70 text-[9px] font-bold uppercase tracking-widest mt-0.5">
+                                                                        Meat & Potatoes</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
                 </section>
+
+                <!-- Our Place Section -->
+                <section class="w-full relative overflow-hidden bg-[length:100%_100%] bg-center bg-no-repeat flex flex-col justify-center py-10 md:py-16"
+                        id="our-place">
+
+                        <div class="max-w-7xl mx-auto relative z-10 w-full px-margin-mobile md:px-margin-desktop">
+                                <!-- Header with left-aligned typography -->
+                                <div
+                                        class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14 reveal">
+                                        <div>
+                                                <span
+                                                        class="text-[#ffba20] font-label-sm text-label-sm uppercase tracking-[0.3em] mb-3 block">Visit
+                                                        Us</span>
+                                                <h2 class="text-4xl md:text-6xl font-black text-white leading-tight"
+                                                        style="font-family: 'Archivo Narrow', sans-serif;">
+                                                        Our Place
+                                                </h2>
+                                                <div class="h-1 w-24 bg-primary-container mt-3 mb-4"></div>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-white/80 max-w-md md:text-right">
+                                                A cozy corner in the heart of Reykjavík where every taco is wrapped with
+                                                love and every crepe is a little piece of France.
+                                        </p>
+                                </div>
+
+                                <!-- Collage Gallery Grid -->
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 reveal auto-rows-[200px] md:auto-rows-[260px]"
+                                        style="transition-delay: 150ms;">
+                                        <!-- Photo 1 — Large -->
+                                        <div
+                                                class="col-span-2 row-span-2 overflow-hidden group relative cursor-pointer">
+                                                <img src="/our-place-1.png" alt="Andrez Interior"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Interior</span>
+                                                        <h3 class="text-white font-black text-lg mt-1">Warm Vibes</h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- Photo 2 — Tall -->
+                                        <div
+                                                class="col-span-1 row-span-2 overflow-hidden group relative cursor-pointer">
+                                                <img src="/our-place-2.png" alt="Ordering Counter"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Service</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Ordering
+                                                                Counter</h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- Accent Quote Card — Tall -->
+                                        <div
+                                                class="col-span-1 row-span-2 bg-[#e89e1b] flex flex-col justify-center items-center text-center p-6 relative overflow-hidden">
+                                                <div
+                                                        class="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-[#ffba20]/30 blur-xl">
+                                                </div>
+                                                <div
+                                                        class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-black/10 blur-2xl">
+                                                </div>
+                                                <span class="text-5xl leading-none mb-2 text-black"
+                                                        style="font-family: 'Merriweather', serif;">"</span>
+                                                <p class="text-black font-bold text-sm leading-relaxed italic"
+                                                        style="font-family: 'Merriweather', serif;">
+                                                        Best French Tacos I've ever had outside Lyon!
+                                                </p>
+                                                <span
+                                                        class="mt-3 text-black/60 text-xs font-bold uppercase tracking-widest">—
+                                                        Happy Customer</span>
+                                        </div>
+
+                                        <!-- Photo 3 — Standard -->
+                                        <div
+                                                class="col-span-1 row-span-1 overflow-hidden group relative cursor-pointer">
+                                                <img src="/our-place-3.png" alt="Dining Area"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Seating</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Dining Booths
+                                                        </h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- Photo 4 — Standard -->
+                                        <div
+                                                class="col-span-1 row-span-1 overflow-hidden group relative cursor-pointer">
+                                                <img src="/our-place-4.png" alt="Kitchen Action"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Kitchen</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Made Fresh</h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- Photo 5 — Wide -->
+                                        <div
+                                                class="col-span-2 row-span-1 overflow-hidden group relative cursor-pointer">
+                                                <img src="/our-place-5.png" alt="Andrez Exterior"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Exterior</span>
+                                                        <h3 class="text-white font-black text-lg mt-1">Find Us in
+                                                                Reykjavík</h3>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
                 <!-- Popular Items (Bento Grid) -->
                 <section
                         class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-b border-surface-container">
@@ -552,23 +839,16 @@
                 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container" id="reviews">
                         <div class="max-w-7xl mx-auto">
                                 <div class="text-center mb-margin-desktop reveal">
-                                        <div class="flex items-center justify-center gap-2 mb-2 text-primary-container">
-                                                <span class="material-symbols-outlined"
-                                                        style="font-variation-settings: 'FILL' 1;">star</span>
-                                                <span class="material-symbols-outlined"
-                                                        style="font-variation-settings: 'FILL' 1;">star</span>
-                                                <span class="material-symbols-outlined"
-                                                        style="font-variation-settings: 'FILL' 1;">star</span>
-                                                <span class="material-symbols-outlined"
-                                                        style="font-variation-settings: 'FILL' 1;">star</span>
-                                                <span class="material-symbols-outlined"
-                                                        style="font-variation-settings: 'FILL' 1;">star_half</span>
+                                        <div id="reviews-stars-container"
+                                                class="flex items-center justify-center gap-2 mb-2 text-primary-container">
+                                                <!-- Stars loaded dynamically -->
                                         </div>
-                                        <h2
+                                        <h2 id="reviews-rating-text"
                                                 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">
                                                 4.7 Stars</h2>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">Based on 43 happy
-                                                reviews</p>
+                                        <p id="reviews-reviews-count"
+                                                class="font-body-md text-body-md text-on-surface-variant">Based on 43
+                                                happy reviews</p>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                                         <!-- Review Card -->

@@ -15,12 +15,9 @@
 }
 
 #mobile-menu-btn.menu-open {
-        clip-path: none !important;
         background: transparent !important;
-        width: auto;
-        height: auto;
-        padding: 0.75rem;
 }
+
 
 .smooth-shadow {
         box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
@@ -238,3 +235,37 @@
                 background-position: 0% 50%;
         }
 }
+
+/* Infinite Scrolling Marquee */
+@keyframes marquee {
+        0% {
+                transform: translateX(0);
+        }
+        100% {
+                transform: translateX(-50%);
+        }
+}
+
+.animate-marquee {
+        animation: marquee 35s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+        animation-play-state: paused;
+}
+
+/* Our Place Responsive Background */
+#our-place {
+        background-color: #000000;
+        background-image: none;
+}
+
+@media (min-width: 768px) {
+        #our-place {
+                background-image: url('/potato-fondo.png');
+                aspect-ratio: 1920/1080;
+        }
+}
+
+
+

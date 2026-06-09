@@ -180,9 +180,104 @@ function initMobileMenu() {
         });
 }
 
+// Dynamic Reviews Loader and Animator
+async function loadReviewsData() {
+        try {
+                const response = await fetch('/reviews-data.json');
+                if (!response.ok) throw new Error('Failed to load reviews data');
+                const data = await response.json();
+                const rating = data.rating || 4.7;
+                const count = data.reviewsCount || 50;
+
+                // Elements
+                const heroRatingNum = document.getElementById('hero-rating-num');
+                const heroStarsContainer = document.getElementById('hero-stars-container');
+                const heroReviewsCount = document.getElementById('hero-reviews-count');
+
+                const reviewsStarsContainer = document.getElementById('reviews-stars-container');
+                const reviewsRatingText = document.getElementById('reviews-rating-text');
+                const reviewsReviewsCount = document.getElementById('reviews-reviews-count');
+
+                // Render Stars Function
+                function renderStars(container, fillCol = '#ffba20', emptyCol = '#4a4a4a') {
+                        if (!container) return;
+                        container.innerHTML = '';
+                        for (let i = 1; i <= 5; i++) {
+                                if (i <= Math.floor(rating)) {
+                                        // Fully filled star
+                                        container.innerHTML += `
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${fillCol}" class="w-5 h-5">
+                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg>
+                                        `;
+                                } else if (i > Math.ceil(rating)) {
+                                        // Empty/Gray star
+                                        container.innerHTML += `
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${emptyCol}" class="w-5 h-5">
+                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg>
+                                        `;
+                                } else {
+                                        // Partially filled star
+                                        const percentage = Math.round((rating % 1) * 100);
+                                        const gradId = `star-grad-${Math.random().toString(36).substr(2, 9)}`;
+                                        container.innerHTML += `
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                                                        <defs>
+                                                                <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                                        <stop offset="${percentage}%" stop-color="${fillCol}" />
+                                                                        <stop offset="${percentage}%" stop-color="${emptyCol}" />
+                                                                </linearGradient>
+                                                        </defs>
+                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#${gradId})" />
+                                                </svg>
+                                        `;
+                                }
+                        }
+                }
+
+                // Render stars in both containers
+                renderStars(heroStarsContainer);
+                renderStars(reviewsStarsContainer, '#ffba20', '#4a4a4a');
+
+                // Animate Rating Values
+                if (heroRatingNum) {
+                        animateValue(heroRatingNum, 0, rating, 1500, (v) => v.toFixed(1));
+                }
+                if (reviewsRatingText) {
+                        animateValue(reviewsRatingText, 0, rating, 1500, (v) => `${v.toFixed(1)} Stars`);
+                }
+
+                // Animate Reviews Count
+                if (heroReviewsCount) {
+                        animateValue(heroReviewsCount, 0, count, 1500, (v) => `(+${Math.round(v)} reviews)`);
+                }
+                if (reviewsReviewsCount) {
+                        animateValue(reviewsReviewsCount, 0, count, 1500, (v) => `Based on ${Math.round(v)} happy reviews`);
+                }
+
+        } catch (error) {
+                console.error("Error updating live reviews rating:", error);
+        }
+}
+
+function animateValue(obj, start, end, duration, formatFn = (v) => v) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = formatFn(start + progress * (end - start));
+                if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                }
+        };
+        window.requestAnimationFrame(step);
+}
+
 function init() {
         initObserver();
         initMobileMenu();
+        loadReviewsData();
 }
 
 if (document.readyState === 'loading') {
