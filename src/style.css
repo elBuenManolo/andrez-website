@@ -125,82 +125,72 @@
         animation: float 5s ease-in-out infinite;
 }
 
-/* Tilted Stacked Photo Placeholders */
-.photo-stack {
-        position: relative;
-        width: 100%;
-        height: 360px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/* Hero Showcase */
+.hero-showcase {
+        perspective: 1000px;
 }
 
-@media (min-width: 1024px) {
-        .photo-stack {
-                height: 520px;
-        }
+.hero-food-card {
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
 }
 
-.photo-card {
-        position: absolute;
-        width: 260px;
-        height: 195px;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0.1s;
+/* Cutout card style — no bg, no rounded corners, no overflow clip */
+.hero-cutout-card {
+        background: transparent;
+        border-radius: 0;
+        overflow: visible;
 }
 
-@media (min-width: 768px) {
-        .photo-card {
-                width: 400px;
-                height: 300px;
-        }
+.hero-food-card:hover {
+        filter: brightness(1.1);
 }
 
-.photo-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+.hero-food-main {
+        animation: heroFloat1 6s ease-in-out infinite;
 }
 
-.photo-card:hover {
+.hero-food-secondary {
+        animation: heroFloat2 7s ease-in-out infinite;
+}
+
+@keyframes heroFloat1 {
+        0%, 100% { transform: translateY(0) rotate(-2deg); }
+        50% { transform: translateY(-16px) rotate(0deg); }
+}
+
+@keyframes heroFloat2 {
+        0%, 100% { transform: translateY(0) rotate(2deg); }
+        50% { transform: translateY(-12px) rotate(0deg); }
+}
+
+.hero-food-card:hover {
+        transform: translateY(-8px) rotate(0deg) scale(1.05) !important;
         z-index: 40 !important;
-        transform: scale(1.15) rotate(0deg) !important;
 }
 
-.photo-card-1 {
-        top: 8%;
-        left: 5%;
-        transform: rotate(-12deg) translate(0, 0);
-        z-index: 10;
+/* Golden bracket decoration */
+.hero-bracket {
+        position: relative;
 }
 
-.photo-card-2 {
-        top: 15%;
-        left: 22%;
-        transform: rotate(3deg) translate(0, 0);
-        z-index: 20;
+/* Decorative golden rings */
+.hero-ring {
+        animation: ringPulse 8s ease-in-out infinite;
 }
 
-.photo-card-3 {
-        bottom: 8%;
-        right: 5%;
-        transform: rotate(10deg) translate(0, 0);
-        z-index: 30;
+@keyframes ringPulse {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.03); }
 }
 
-/* Spread apart slightly on parent hover when not individually hovered */
-.photo-stack:hover .photo-card-1:not(:hover) {
-        transform: rotate(-18deg) translate(-35px, -20px);
+/* Floating accent dots */
+.hero-float-dot {
+        animation: dotFloat 4s ease-in-out infinite;
 }
 
-.photo-stack:hover .photo-card-2:not(:hover) {
-        transform: rotate(-2deg) translate(-5px, -10px);
-}
-
-.photo-stack:hover .photo-card-3:not(:hover) {
-        transform: rotate(16deg) translate(35px, 20px);
+@keyframes dotFloat {
+        0%, 100% { transform: translateY(0); opacity: 0.6; }
+        50% { transform: translateY(-10px); opacity: 1; }
 }
 
 /* Shiny Gold Text style with animated metallic texture */
