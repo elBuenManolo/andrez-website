@@ -55,6 +55,29 @@
         transform: translateY(0);
 }
 
+/* Hero staggered fade-in animations */
+@keyframes heroFadeIn {
+        from {
+                opacity: 0;
+                transform: translateY(25px);
+        }
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+.hero-fade {
+        opacity: 0;
+        animation: heroFadeIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-fade-1 { animation-delay: 0.15s; }
+.hero-fade-2 { animation-delay: 0.25s; }
+.hero-fade-3 { animation-delay: 1.25s; }
+.hero-fade-4 { animation-delay: 1.35s; }
+.hero-fade-5 { animation-delay: 1.45s; }
+
 /* Mobile sidebar menu */
 #mobile-sidebar {
         transform: translateX(100%);
@@ -237,7 +260,7 @@
 }
 
 .animate-marquee {
-        animation: marquee 35s linear infinite;
+        animation: marquee 40s linear infinite;
 }
 
 .marquee-container:hover .animate-marquee {
@@ -257,5 +280,75 @@
         }
 }
 
+/* Golden Ticket Animations */
+@keyframes goldenTicketIntro {
+        0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8) rotate(5deg);
+        }
+        70% {
+                transform: translateY(-10px) scale(1.02) rotate(-1deg);
+        }
+        100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+        }
+}
+
+@keyframes goldenTicketFloat {
+        0%, 100% {
+                transform: translateY(0) rotate(0deg);
+        }
+        50% {
+                transform: translateY(-8px) rotate(-1deg);
+        }
+}
+
+@keyframes ticketShine {
+        0% {
+                transform: translateX(-100%) skewX(-15deg);
+        }
+        20%, 100% {
+                transform: translateX(100%) skewX(-15deg);
+        }
+}
+
+.animate-ticket-shine {
+        animation: ticketShine 4s infinite linear;
+}
+
+.golden-ticket-active {
+        display: block !important;
+        pointer-events: auto !important;
+        animation: goldenTicketIntro 1s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards, goldenTicketFloat 6s ease-in-out infinite 1s;
+}
+
+.golden-ticket-closing {
+        pointer-events: none !important;
+        transition: opacity 0.5s ease, transform 0.5s ease !important;
+        opacity: 0 !important;
+        transform: translateY(50px) scale(0.9) rotate(2deg) !important;
+}
 
 
+@keyframes ticketBounceSide {
+        0%, 100% {
+                transform: translateX(0);
+        }
+        5% {
+                transform: translateX(-15px);
+        }
+        10% {
+                transform: translateX(0);
+        }
+        15% {
+                transform: translateX(-7px);
+        }
+        20% {
+                transform: translateX(0);
+        }
+}
+
+.animate-ticket-bounce {
+        animation: ticketBounceSide 2s ease-in-out infinite;
+}

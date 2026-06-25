@@ -186,8 +186,8 @@ async function loadReviewsData() {
                 const response = await fetch('/reviews-data.json');
                 if (!response.ok) throw new Error('Failed to load reviews data');
                 const data = await response.json();
-                const rating = data.rating || 4.7;
-                const count = data.reviewsCount || 50;
+                const rating = data.rating || 4.8;
+                const count = data.reviewsCount || 70;
 
                 // Elements
                 const heroRatingNum = document.getElementById('hero-rating-num');
@@ -274,10 +274,41 @@ function animateValue(obj, start, end, duration, formatFn = (v) => v) {
         window.requestAnimationFrame(step);
 }
 
+
+
+function initNavbarScroll() {
+        const nav = document.querySelector('nav');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        if (!nav) return;
+
+        function handleScroll() {
+                if (window.scrollY > 20) {
+                        nav.classList.add('bg-[#e89e1b]', 'shadow-md');
+                        nav.classList.remove('bg-transparent', 'shadow-none');
+                        if (mobileMenuBtn) {
+                                mobileMenuBtn.classList.add('text-black');
+                                mobileMenuBtn.classList.remove('text-white');
+                        }
+                } else {
+                        nav.classList.remove('bg-[#e89e1b]', 'shadow-md');
+                        nav.classList.add('bg-transparent', 'shadow-none');
+                        if (mobileMenuBtn) {
+                                mobileMenuBtn.classList.remove('text-black');
+                                mobileMenuBtn.classList.add('text-white');
+                        }
+                }
+        }
+
+        // Initialize state
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+}
+
 function init() {
         initObserver();
         initMobileMenu();
         loadReviewsData();
+        initNavbarScroll();
 }
 
 if (document.readyState === 'loading') {
