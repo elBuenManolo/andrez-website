@@ -1,3 +1,8 @@
+html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+}
+
 .material-symbols-outlined {
         font-family: 'Material Symbols Outlined';
         font-weight: normal;
@@ -61,6 +66,7 @@
                 opacity: 0;
                 transform: translateY(25px);
         }
+
         to {
                 opacity: 1;
                 transform: translateY(0);
@@ -72,11 +78,25 @@
         animation: heroFadeIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.hero-fade-1 { animation-delay: 0.15s; }
-.hero-fade-2 { animation-delay: 0.25s; }
-.hero-fade-3 { animation-delay: 1.25s; }
-.hero-fade-4 { animation-delay: 1.35s; }
-.hero-fade-5 { animation-delay: 1.45s; }
+.hero-fade-1 {
+        animation-delay: 0.15s;
+}
+
+.hero-fade-2 {
+        animation-delay: 0.25s;
+}
+
+.hero-fade-3 {
+        animation-delay: 1.25s;
+}
+
+.hero-fade-4 {
+        animation-delay: 1.35s;
+}
+
+.hero-fade-5 {
+        animation-delay: 1.45s;
+}
 
 /* Mobile sidebar menu */
 #mobile-sidebar {
@@ -114,11 +134,14 @@
 .nav-link::after {
         content: '';
         position: absolute;
-        width: calc(100% - 32px); /* matches horizontal padding of px-4 (16px left + 16px right) */
+        width: calc(100% - 32px);
+        /* matches horizontal padding of px-4 (16px left + 16px right) */
         height: 2px;
         bottom: -2px;
-        left: 16px; /* offsets padding to center the line */
-        background-color: #ffba20; /* primary-container color from our theme */
+        left: 16px;
+        /* offsets padding to center the line */
+        background-color: #ffba20;
+        /* primary-container color from our theme */
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -140,8 +163,15 @@
 }
 
 @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-12px); }
+
+        0%,
+        100% {
+                transform: translateY(0);
+        }
+
+        50% {
+                transform: translateY(-12px);
+        }
 }
 
 .animate-float {
@@ -177,13 +207,27 @@
 }
 
 @keyframes heroFloat1 {
-        0%, 100% { transform: translateY(0) rotate(-2deg); }
-        50% { transform: translateY(-16px) rotate(0deg); }
+
+        0%,
+        100% {
+                transform: translateY(0) rotate(-2deg);
+        }
+
+        50% {
+                transform: translateY(-16px) rotate(0deg);
+        }
 }
 
 @keyframes heroFloat2 {
-        0%, 100% { transform: translateY(0) rotate(2deg); }
-        50% { transform: translateY(-12px) rotate(0deg); }
+
+        0%,
+        100% {
+                transform: translateY(0) rotate(2deg);
+        }
+
+        50% {
+                transform: translateY(-12px) rotate(0deg);
+        }
 }
 
 .hero-food-card:hover {
@@ -202,8 +246,17 @@
 }
 
 @keyframes ringPulse {
-        0%, 100% { opacity: 0.5; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.03); }
+
+        0%,
+        100% {
+                opacity: 0.5;
+                transform: scale(1);
+        }
+
+        50% {
+                opacity: 1;
+                transform: scale(1.03);
+        }
 }
 
 /* Floating accent dots */
@@ -212,20 +265,27 @@
 }
 
 @keyframes dotFloat {
-        0%, 100% { transform: translateY(0); opacity: 0.6; }
-        50% { transform: translateY(-10px); opacity: 1; }
+
+        0%,
+        100% {
+                transform: translateY(0);
+                opacity: 0.6;
+        }
+
+        50% {
+                transform: translateY(-10px);
+                opacity: 1;
+        }
 }
 
 /* Shiny Gold Text style with animated metallic texture */
 .gold-text-shiny {
-        background: linear-gradient(
-                135deg,
-                #bf953f 0%,
-                #fcf6ba 25%,
-                #b38728 50%,
-                #fbf5b7 75%,
-                #aa771c 100%
-        );
+        background: linear-gradient(135deg,
+                        #bf953f 0%,
+                        #fcf6ba 25%,
+                        #b38728 50%,
+                        #fbf5b7 75%,
+                        #aa771c 100%);
         background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -241,9 +301,11 @@
         0% {
                 background-position: 0% 50%;
         }
+
         50% {
                 background-position: 100% 50%;
         }
+
         100% {
                 background-position: 0% 50%;
         }
@@ -254,6 +316,7 @@
         0% {
                 transform: translateX(0);
         }
+
         100% {
                 transform: translateX(-50%);
         }
@@ -286,9 +349,11 @@
                 opacity: 0;
                 transform: translateY(100px) scale(0.8) rotate(5deg);
         }
+
         70% {
                 transform: translateY(-10px) scale(1.02) rotate(-1deg);
         }
+
         100% {
                 opacity: 1;
                 transform: translateY(0) scale(1) rotate(0deg);
@@ -296,9 +361,12 @@
 }
 
 @keyframes goldenTicketFloat {
-        0%, 100% {
+
+        0%,
+        100% {
                 transform: translateY(0) rotate(0deg);
         }
+
         50% {
                 transform: translateY(-8px) rotate(-1deg);
         }
@@ -308,7 +376,9 @@
         0% {
                 transform: translateX(-100%) skewX(-15deg);
         }
-        20%, 100% {
+
+        20%,
+        100% {
                 transform: translateX(100%) skewX(-15deg);
         }
 }
@@ -332,18 +402,24 @@
 
 
 @keyframes ticketBounceSide {
-        0%, 100% {
+
+        0%,
+        100% {
                 transform: translateX(0);
         }
+
         5% {
                 transform: translateX(-15px);
         }
+
         10% {
                 transform: translateX(0);
         }
+
         15% {
                 transform: translateX(-7px);
         }
+
         20% {
                 transform: translateX(0);
         }

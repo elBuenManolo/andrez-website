@@ -245,7 +245,7 @@ async function loadReviewsData() {
                         animateValue(heroRatingNum, 0, rating, 1500, (v) => v.toFixed(1));
                 }
                 if (reviewsRatingText) {
-                        animateValue(reviewsRatingText, 0, rating, 1500, (v) => `${v.toFixed(1)} Stars`);
+                        animateValue(reviewsRatingText, 0, rating, 1500, (v) => v.toFixed(1));
                 }
 
                 // Animate Reviews Count
@@ -345,12 +345,124 @@ function cookieConsent() {
         });
 }
 
+// Interactive Food Gallery Lightbox
+function initFoodGallery() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.getElementById('lightbox-close');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        if (!lightbox || !galleryItems.length) return;
+
+        // Build gallery data from DOM
+        const galleryData = [];
+        galleryItems.forEach(item => {
+                const img = item.querySelector('img');
+                const caption = item.querySelector('h3');
+                galleryData.push({
+                        src: img ? img.src : '',
+                        alt: img ? img.alt : '',
+                        caption: caption ? caption.textContent.trim() : ''
+                });
+        });
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+                currentIndex = index;
+                updateLightbox();
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                requestAnimationFrame(() => {
+                        lightbox.classList.remove('opacity-0');
+                        lightbox.classList.add('opacity-100');
+                });
+                document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+                lightbox.classList.remove('opacity-100');
+                lightbox.classList.add('opacity-0');
+                setTimeout(() => {
+                        lightbox.classList.add('hidden');
+                        lightbox.classList.remove('flex');
+                }, 300);
+                document.body.style.overflow = '';
+        }
+
+        function updateLightbox() {
+                const item = galleryData[currentIndex];
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.alt;
+                lightboxCaption.textContent = item.caption;
+        }
+
+        function nextImage() {
+                currentIndex = (currentIndex + 1) % galleryData.length;
+                updateLightbox();
+        }
+
+        function prevImage() {
+                currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+                updateLightbox();
+        }
+
+        // Attach click events to gallery items
+        galleryItems.forEach((item, i) => {
+                item.addEventListener('click', () => openLightbox(i));
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        // Close on backdrop click
+        lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+        });
+}
+
+function initTicketVisibility() {
+        const ticket = document.getElementById('static-ticket');
+        const specialOffers = document.getElementById('special-offers');
+        if (!ticket || !specialOffers) return;
+
+        const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                                ticket.classList.add('opacity-0', 'pointer-events-none');
+                                ticket.classList.remove('opacity-100');
+                        } else {
+                                ticket.classList.remove('opacity-0', 'pointer-events-none');
+                                ticket.classList.add('opacity-100');
+                        }
+                });
+        }, {
+                threshold: 0
+        });
+
+        observer.observe(specialOffers);
+}
+
 function init() {
         initObserver();
         initMobileMenu();
         loadReviewsData();
         initNavbarScroll();
         cookieConsent();
+        initFoodGallery();
+        initTicketVisibility();
 }
 
 if (document.readyState === 'loading') {
