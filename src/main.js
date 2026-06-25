@@ -304,11 +304,53 @@ function initNavbarScroll() {
         window.addEventListener('scroll', handleScroll);
 }
 
+function cookieConsent() {
+        const cookieconsent = document.getElementById("cookie-consent");
+        const acceptBtn = document.getElementById("accept-btn");
+        const cancelBtn = document.getElementById("cancel-btn");
+
+        if (!cookieconsent || !acceptBtn || !cancelBtn) return;
+
+        // Check if user already consented
+        if (localStorage.getItem("cookieConsent")) {
+                return;
+        }
+
+        // Show cookie consent banner
+        cookieconsent.classList.remove("hidden");
+        // Trigger transition
+        setTimeout(() => {
+                cookieconsent.classList.remove("translate-y-24", "opacity-0");
+                cookieconsent.classList.add("translate-y-0", "opacity-100");
+        }, 100);
+
+        function hideBanner() {
+                cookieconsent.classList.remove("translate-y-0", "opacity-100");
+                cookieconsent.classList.add("translate-y-24", "opacity-0");
+                setTimeout(() => {
+                        cookieconsent.classList.add("hidden");
+                }, 500);
+        }
+
+        // Accept button
+        acceptBtn.addEventListener("click", () => {
+                localStorage.setItem("cookieConsent", "accepted");
+                hideBanner();
+        });
+
+        // Cancel button
+        cancelBtn.addEventListener("click", () => {
+                localStorage.setItem("cookieConsent", "declined");
+                hideBanner();
+        });
+}
+
 function init() {
         initObserver();
         initMobileMenu();
         loadReviewsData();
         initNavbarScroll();
+        cookieConsent();
 }
 
 if (document.readyState === 'loading') {

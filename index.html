@@ -970,6 +970,8 @@
                                         href="#">Borgartún 29</a>
                                 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
                                         href="#">Phone: 415 6480</a>
+                                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors duration-200"
+                                        href="/terms.html">Terms and Conditions</a>
                         </div>
                         <div class="flex flex-col gap-3 items-center md:items-end text-center md:text-right">
                                 <span
@@ -1011,6 +1013,29 @@
         <div id="static-ticket" class="group fixed right-0 top-1/2 -translate-y-1/2 translate-x-[65%] hover:translate-x-0 transition-transform duration-500 ease-out z-50 w-[120px] md:w-[160px] drop-shadow-2xl">
                 <div class="animate-ticket-bounce group-hover:animate-none">
                         <img src="/tiquet.png" alt="Tiquet d'Ofertes" class="w-full h-auto">
+                </div>
+        </div>
+
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-consent" class="fixed bottom-6 left-6 right-6 md:left-auto md:right-6 md:max-w-md bg-black border border-white rounded-none p-5 shadow-2xl z-50 transform translate-y-24 opacity-0 transition-all duration-500 ease-out hidden flex flex-col gap-4">
+                <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 bg-white/10 flex items-center justify-center text-white border border-white/20">
+                                <span class="material-symbols-outlined">cookie</span>
+                        </div>
+                        <div class="flex-1">
+                                <h3 class="font-label-sm text-sm uppercase tracking-wider text-white font-bold">Cookies</h3>
+                                <p class="text-xs text-neutral-300 mt-1 leading-relaxed">
+                                        We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.
+                                </p>
+                        </div>
+                </div>
+                <div class="flex items-center justify-end gap-3 border-t border-neutral-800 pt-3">
+                        <button id="cancel-btn" class="px-4 py-2 text-xs font-semibold text-neutral-400 hover:text-white uppercase tracking-widest transition-colors duration-200">
+                                Decline
+                        </button>
+                        <button id="accept-btn" class="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 font-bold text-xs uppercase tracking-widest rounded-none border border-black transition-all duration-200 shadow-md">
+                                Accept All
+                        </button>
                 </div>
         </div>
 </body>
