@@ -110,20 +110,20 @@
         <main class="pt-0">
                 <!-- Hero Section -->
                 <section
-                        class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+                        class="relative w-full min-h-[560px] md:min-h-[1080px] flex items-center justify-start overflow-hidden bg-black">
 
                         <!-- Cinematic Background -->
-                        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+                        <div class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-50">
                                 <img src="/hero-bg.png" alt="" class="w-full h-full object-cover" />
                         </div>
 
 
 
                         <div
-                                class="relative z-10 w-full max-w-[1380px] mx-auto px-margin-mobile md:px-margin-desktop pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24">
+                                class="relative z-10 w-full max-w-[1380px] mx-auto px-margin-mobile md:px-margin-desktop pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24 md:-mt-16 lg:-mt-24">
 
                                 <!-- Decorative Ornamental Cartouche -->
-                                <div class="flex justify-center mb-4 md:mb-6 -mt-4 md:-mt-6 hero-fade hero-fade-1">
+                                <div class="flex justify-start mb-4 md:mb-6 -mt-4 md:-mt-6 hero-fade hero-fade-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 50"
                                                 class="w-[220px] md:w-[300px] lg:w-[360px] h-auto drop-shadow-[0_2px_12px_rgba(255,186,32,0.25)]">
                                                 <path d="M 10,48 C 10,35 40,28 80,25 C 120,22 155,18 175,9 Q 190,2 200,0 Q 210,2 225,9 C 245,18 280,22 320,25 C 360,28 390,35 390,48"
@@ -138,11 +138,11 @@
                                                 <circle cx="330" cy="28" r="2" fill="#ffba20" opacity="0.4" />
                                         </svg>
                                 </div>
-                                <div class="max-w-4xl w-full mx-auto z-20">
+                                <div class="max-w-4xl w-full z-20">
 
                                         <!-- Left Column (Text Content) -->
-                                        <div class="flex flex-col items-center text-center space-y-7">
-                                                <h1 class="hero-fade hero-fade-2 text-[36px] leading-[48px] md:text-[56px] md:leading-[72px] lg:text-[60px] lg:leading-[76px] text-on-background max-w-3xl mx-auto"
+                                        <div class="flex flex-col items-start text-left space-y-7">
+                                                <h1 class="hero-fade hero-fade-2 text-[36px] leading-[48px] md:text-[56px] md:leading-[72px] lg:text-[60px] lg:leading-[76px] text-on-background max-w-3xl"
                                                         style="font-family: 'Merriweather', serif;">
                                                         <span>Authentic French <span
                                                                         class="gold-text-shiny">Tacos</span> &amp; <span
@@ -152,9 +152,7 @@
                                                 </h1>
 
                                                 <div
-                                                        class="hero-fade hero-fade-3 flex items-center justify-center gap-4 max-w-lg mx-auto">
-                                                        <span
-                                                                class="flex-1 h-px bg-gradient-to-r from-transparent to-[#ffba20]/40"></span>
+                                                        class="hero-fade hero-fade-3 flex items-center justify-start gap-4 w-full max-w-2xl">
                                                         <p class="text-[11px] md:text-[13px] uppercase tracking-[0.35em] text-white/60"
                                                                 style="font-family: 'Inter', sans-serif;">
                                                                 Handcrafted daily at Borgartún 29 <span
@@ -162,15 +160,15 @@
                                                                 Reykjavík
                                                         </p>
                                                         <span
-                                                                class="flex-1 h-px bg-gradient-to-l from-transparent to-[#ffba20]/40"></span>
+                                                                class="flex-1 h-px bg-gradient-to-r from-[#ffba20]/40 to-transparent"></span>
                                                 </div>
 
                                                 <!-- Golden Bracket wrapping Rating + Buttons -->
                                                 <div
-                                                        class="hero-fade hero-fade-4 hero-bracket relative pl-0 space-y-6 flex flex-col items-center">
+                                                        class="hero-fade hero-fade-4 hero-bracket relative pl-0 space-y-6 flex flex-col items-start w-full">
 
                                                         <!-- Google Rating Section -->
-                                                        <div class="flex items-center justify-center flex-wrap gap-x-3 gap-y-2 text-on-background/90"
+                                                        <div class="flex items-center justify-start flex-wrap gap-x-3 gap-y-2 text-on-background/90"
                                                                 style="font-family: 'Merriweather', serif;">
                                                                 <span
                                                                         class="text-sm font-semibold tracking-wide italic">Google
@@ -188,20 +186,20 @@
 
                                                         <!-- Action Buttons -->
                                                         <div
-                                                                class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                                                                <a class="hero-btn-rect w-[220px] text-center bg-[#ffba20] text-black px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 hover:bg-[#e5a817] border border-transparent hover:border-black/10"
+                                                                class="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-4 w-full">
+                                                                <a class="hero-btn-rect w-full sm:w-[220px] text-center bg-[#ffba20] text-black px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 hover:bg-[#e5a817] border border-transparent hover:border-black/10"
                                                                         href="https://store.salescloud.is/?uuid=41ba87fe-6b92-4654-ba90-571a973f282b">
                                                                         <span
                                                                                 class="material-symbols-outlined text-[20px]">restaurant</span>
                                                                         View Menu
                                                                 </a>
-                                                                <a class="hero-btn-rect w-[220px] text-center bg-black text-white px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 border border-white/25 hover:border-white/60 hover:bg-neutral-900"
+                                                                <a class="hero-btn-rect w-full sm:w-[220px] text-center bg-black text-white px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 border border-white/25 hover:border-white/60 hover:bg-neutral-900"
                                                                         href="https://maps.app.goo.gl/KH9D7vbmQKSd7YmFA">
                                                                         <span
                                                                                 class="material-symbols-outlined text-[20px]">location_on</span>
                                                                         Find Us
                                                                 </a>
-                                                                <a class="hero-btn-rect w-[220px] text-center bg-black text-white px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 border border-white/25 hover:border-white/60 hover:bg-neutral-900"
+                                                                <a class="hero-btn-rect w-full sm:w-[220px] text-center bg-black text-white px-6 py-3.5 rounded-sm font-label-sm uppercase tracking-widest font-bold flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-300 border border-white/25 hover:border-white/60 hover:bg-neutral-900"
                                                                         href="https://wolt.com/en/isl/reykjavik/restaurant/andrezrvk">
                                                                         <svg viewBox="60 95 150 110" width="24"
                                                                                 height="18" class="flex-shrink-0">
@@ -217,22 +215,7 @@
                                                 </div>
                                         </div>
                                 </div>
-
-                                <!-- See More Arrow (Desktop only) -->
-                                <div class="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-                                        <a href="#our-place"
-                                                class="hero-fade hero-fade-5 flex flex-col items-center gap-2 text-white/50 hover:text-white/80 transition-colors duration-300 group cursor-pointer">
-                                                <span class="text-[10px] uppercase tracking-[0.3em] font-semibold"
-                                                        style="font-family: 'Inter', sans-serif;">See more about
-                                                        us</span>
-                                                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor"
-                                                        stroke-width="2" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                        </a>
-                                </div>
-
+                        </div>
 
                 </section>
 
