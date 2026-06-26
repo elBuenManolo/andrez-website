@@ -1,5 +1,6 @@
 // Import styles
 import './style.css';
+import { strings } from './translations.js';
 
 // Tailwind configuration
 window.tailwind = window.tailwind || {};
@@ -186,6 +187,7 @@ async function loadReviewsData() {
                 const response = await fetch('/reviews-data.json');
                 if (!response.ok) throw new Error('Failed to load reviews data');
                 const data = await response.json();
+                window.reviewsData = data; // Store data globally
                 const rating = data.rating || 4.8;
                 const count = data.reviewsCount || 70;
 
@@ -250,10 +252,16 @@ async function loadReviewsData() {
 
                 // Animate Reviews Count
                 if (heroReviewsCount) {
-                        animateValue(heroReviewsCount, 0, count, 1500, (v) => `(+${Math.round(v)} reviews)`);
+                        animateValue(heroReviewsCount, 0, count, 1500, (v) => {
+                                const currentLang = localStorage.getItem('language') || 'en';
+                                return currentLang === 'is' ? `(+${Math.round(v)} umsagnir)` : `(+${Math.round(v)} reviews)`;
+                        });
                 }
                 if (reviewsReviewsCount) {
-                        animateValue(reviewsReviewsCount, 0, count, 1500, (v) => `Based on ${Math.round(v)} happy reviews`);
+                        animateValue(reviewsReviewsCount, 0, count, 1500, (v) => {
+                                const currentLang = localStorage.getItem('language') || 'en';
+                                return currentLang === 'is' ? `Byggt á ${Math.round(v)} ánægðum umsögnum` : `Based on ${Math.round(v)} happy reviews`;
+                        });
                 }
 
         } catch (error) {
@@ -455,6 +463,59 @@ function initTicketVisibility() {
         observer.observe(specialOffers);
 }
 
+function initLanguageToggle() {
+        const desktopBtn = document.getElementById('lang-toggle-desktop');
+        const mobileBtn = document.getElementById('lang-toggle-mobile');
+        const desktopLabel = document.getElementById('lang-label-desktop');
+        const mobileLabel = document.getElementById('lang-label-mobile');
+
+        let currentLang = localStorage.getItem('language') || 'en';
+
+        function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('language', lang);
+
+                // Update DOM elements using selector mapping
+                const index = lang === 'is' ? 1 : 0;
+                for (const [selector, values] of Object.entries(strings)) {
+                        document.querySelectorAll(selector).forEach(el => {
+                                el.innerHTML = values[index];
+                        });
+                }
+
+                // Re-update dynamic reviews count if they were already loaded
+                if (window.reviewsData) {
+                        const count = window.reviewsData.reviewsCount || 70;
+                        const heroReviewsCount = document.getElementById('hero-reviews-count');
+                        const reviewsReviewsCount = document.getElementById('reviews-reviews-count');
+                        if (heroReviewsCount) {
+                                heroReviewsCount.textContent = lang === 'is' ? `(+${count} umsagnir)` : `(+${count} reviews)`;
+                        }
+                        if (reviewsReviewsCount) {
+                                reviewsReviewsCount.textContent = lang === 'is' ? `Byggt á ${count} ánægðum umsögnum` : `Based on ${count} happy reviews`;
+                        }
+                }
+
+                if (desktopLabel) desktopLabel.textContent = lang === 'is' ? 'IS' : 'EN';
+                if (mobileLabel) mobileLabel.textContent = lang === 'is' ? 'IS' : 'EN';
+        }
+
+        // Initialize
+        setLanguage(currentLang);
+
+        if (desktopBtn) {
+                desktopBtn.addEventListener('click', () => {
+                        setLanguage(currentLang === 'en' ? 'is' : 'en');
+                });
+        }
+
+        if (mobileBtn) {
+                mobileBtn.addEventListener('click', () => {
+                        setLanguage(currentLang === 'en' ? 'is' : 'en');
+                });
+        }
+}
+
 function init() {
         initObserver();
         initMobileMenu();
@@ -463,6 +524,7 @@ function init() {
         cookieConsent();
         initFoodGallery();
         initTicketVisibility();
+        initLanguageToggle();
 }
 
 if (document.readyState === 'loading') {
