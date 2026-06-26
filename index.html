@@ -110,7 +110,7 @@
         <main class="pt-0">
                 <!-- Hero Section -->
                 <section
-                        class="relative w-full min-h-[560px] md:min-h-[1080px] flex items-center justify-start overflow-hidden bg-black">
+                        class="relative w-full min-h-screen md:min-h-screen flex items-center justify-start overflow-hidden bg-black">
 
                         <!-- Cinematic Background -->
                         <div class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-50">
@@ -490,6 +490,7 @@
                         </div>
                 </section>
 
+
                 <!-- Special Offer (Bento Grid) -->
                 <section id="special-offers"
                         class="py-section-gap px-margin-mobile md:px-margin-desktop bg-black border-b border-neutral-800/60">
@@ -504,38 +505,60 @@
                                         <p class="font-body-md text-body-md text-neutral-400">Our guests'
                                                 favorites, prepared fresh daily.</p>
                                 </div>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal"
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto reveal"
                                         style="transition-delay: 100ms;">
-                                        <!-- Container 1 -->
+                                        <!-- Container 1: Lite Kebab Combo -->
                                         <div
-                                                class="bg-black border border-white aspect-[1/2] rounded-none flex flex-col justify-end">
-                                                <div class="bg-red-600 text-white text-center py-2.5 font-bold uppercase tracking-wider border-t border-white"
-                                                        style="font-family: 'Archivo Narrow', sans-serif;">
-                                                        2,200 ISK
+                                                class="bg-neutral-950 aspect-[1/2] md:aspect-square rounded-none flex flex-col md:flex-row justify-between overflow-hidden group transition-all duration-300">
+                                                <div class="h-3/5 md:h-full w-full md:w-1/2 overflow-hidden relative">
+                                                        <img src="/offer-lite-kebab.png" alt="Lite Kebab Offer"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80">
+                                                        </div>
+                                                </div>
+                                                <div class="flex flex-col justify-between flex-grow md:w-1/2">
+                                                        <div class="p-4 md:p-6 flex-grow">
+                                                                <h3 class="text-white font-black text-lg md:text-2xl uppercase tracking-wider"
+                                                                        style="font-family: 'Archivo Narrow', sans-serif;">
+                                                                        Lite Kebab Combo</h3>
+                                                                <p
+                                                                        class="text-sm md:text-base text-neutral-400 mt-3 font-body-md leading-relaxed md:mt-4">
+                                                                        Lite kebab served with crispy French fries and a
+                                                                        refreshing cold soda.
+                                                                </p>
+                                                        </div>
+                                                        <div class="bg-red-600 text-white text-center py-3.5 md:py-4 text-base md:text-lg font-bold uppercase tracking-wider transition-all duration-300"
+                                                                style="font-family: 'Archivo Narrow', sans-serif;">
+                                                                2,590 ISK
+                                                        </div>
                                                 </div>
                                         </div>
-                                        <!-- Container 2 -->
+                                        <!-- Container 2: Pita Kebab Combo -->
                                         <div
-                                                class="bg-black border border-white aspect-[1/2] rounded-none flex flex-col justify-end">
-                                                <div class="bg-red-600 text-white text-center py-2.5 font-bold uppercase tracking-wider border-t border-white"
-                                                        style="font-family: 'Archivo Narrow', sans-serif;">
-                                                        2,800 ISK
+                                                class="bg-neutral-950 aspect-[1/2] md:aspect-square rounded-none flex flex-col md:flex-row justify-between overflow-hidden group transition-all duration-300">
+                                                <div class="h-3/5 md:h-full w-full md:w-1/2 overflow-hidden relative">
+                                                        <img src="/offer-pita-kebab.png" alt="Pita Kebab Offer"
+                                                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                        <div
+                                                                class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80">
+                                                        </div>
                                                 </div>
-                                        </div>
-                                        <!-- Container 3 -->
-                                        <div
-                                                class="bg-black border border-white aspect-[1/2] rounded-none flex flex-col justify-end">
-                                                <div class="bg-red-600 text-white text-center py-2.5 font-bold uppercase tracking-wider border-t border-white"
-                                                        style="font-family: 'Archivo Narrow', sans-serif;">
-                                                        2,600 ISK
-                                                </div>
-                                        </div>
-                                        <!-- Container 4 -->
-                                        <div
-                                                class="bg-black border border-white aspect-[1/2] rounded-none flex flex-col justify-end">
-                                                <div class="bg-red-600 text-white text-center py-2.5 font-bold uppercase tracking-wider border-t border-white"
-                                                        style="font-family: 'Archivo Narrow', sans-serif;">
-                                                        3,200 ISK
+                                                <div class="flex flex-col justify-between flex-grow md:w-1/2">
+                                                        <div class="p-4 md:p-6 flex-grow">
+                                                                <h3 class="text-white font-black text-lg md:text-2xl uppercase tracking-wider"
+                                                                        style="font-family: 'Archivo Narrow', sans-serif;">
+                                                                        Pita Kebab Combo</h3>
+                                                                <p
+                                                                        class="text-sm md:text-base text-neutral-400 mt-3 font-body-md leading-relaxed md:mt-4">
+                                                                        Warm pita bread filled with kebab, fresh
+                                                                        veggies, served with fries and a soda.
+                                                                </p>
+                                                        </div>
+                                                        <div class="bg-red-600 text-white text-center py-3.5 md:py-4 text-base md:text-lg font-bold uppercase tracking-wider transition-all duration-300"
+                                                                style="font-family: 'Archivo Narrow', sans-serif;">
+                                                                2,590 ISK
+                                                        </div>
                                                 </div>
                                         </div>
                                 </div>
@@ -668,22 +691,6 @@
                                                 </div>
                                         </div>
 
-                                        <!-- 7: Fish & Chips — Wide -->
-                                        <div class="gallery-item col-span-2 row-span-1 overflow-hidden group relative cursor-pointer reveal"
-                                                data-gallery-index="6" style="transition-delay:350ms;">
-                                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABE-0qmy2SG1Lw4qyxzrulduaJRcRZG91Tbv3EAxobYW5SbhvxCoAjf8kgLrhvJzG7-MoaZy5n-ueCn4p7EKhXAd1qRfXQ1nNjnsGUrXNjku_SAe6ST_-VAZO90RGCrgRUEm2MDTtilq0U8NyGDyBJw3Q9qZyOFFaGErM2yVTreZncv5L8TZjg3OCTiCSyppQ_dD1SGh2IX5MGp_LSENs7SVJo4pub563sLisLQjh4F02Pz1bYysxqLyzP13u8AU5InoGYj0xPNnJJ"
-                                                        alt="Fish and Chips"
-                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                                <div
-                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                                </div>
-                                                <div
-                                                        class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                                        <span
-                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Classic</span>
-                                                        <h3 class="text-white font-black text-lg mt-1">Fish & Chips</h3>
-                                                </div>
-                                        </div>
 
                                         <!-- 8: Gratinated Crepe — Standard -->
                                         <div class="gallery-item col-span-1 row-span-1 overflow-hidden group relative cursor-pointer reveal"
@@ -1132,7 +1139,7 @@
         </main>
         <!-- Footer -->
         <footer
-                class="bg-surface-container-lowest border-t border-primary-container/20 w-full py-margin-desktop reveal">
+                class="bg-black border-t border-primary-container/20 w-full py-margin-desktop">
                 <div
                         class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto items-center">
                         <div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
