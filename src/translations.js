@@ -65,7 +65,7 @@ export const strings = {
         'Bestu frönsku tacos sem ég hef fengið utan Lyon!'
     ],
     '#our-place span.mt-3': ['— Happy Customer', '— Ánægður viðskiptavinur'],
-    
+
     // Our Place Image Captions (Gallery Grid)
     '#our-place div.grid > div:nth-of-type(1) span': ['Interior', 'Innan dyra'],
     '#our-place div.grid > div:nth-of-type(1) h3': ['Warm Vibes', 'Hlýleg stemning'],
@@ -73,8 +73,8 @@ export const strings = {
     '#our-place div.grid > div:nth-of-type(2) h3': ['Ordering Counter', 'Afgreiðsluborð'],
     '#our-place div.grid > div:nth-of-type(4) span': ['Seating', 'Sæti'],
     '#our-place div.grid > div:nth-of-type(4) h3': ['Dining Booths', 'Básar'],
-    '#our-place div.grid > div:nth-of-type(5) span': ['Kitchen', 'Eldhús'],
-    '#our-place div.grid > div:nth-of-type(5) h3': ['Made Fresh', 'Ferskt og nýgert'],
+    '#our-place div.grid > div:nth-of-type(5) span': ['Greek & French', 'Grikkland & Frakkland'],
+    '#our-place div.grid > div:nth-of-type(5) h3': ['Both our homelands', 'Báð löndin okkar'],
     '#our-place div.grid > div:nth-of-type(6) span': ['Exterior', 'Utandyra'],
     '#our-place div.grid > div:nth-of-type(6) h3': ['Find Us in Reykjavík', 'Finndu okkur í Reykjavík'],
 
