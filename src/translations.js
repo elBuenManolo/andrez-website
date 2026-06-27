@@ -79,21 +79,26 @@ export const strings = {
     '#our-place div.grid > div:nth-of-type(6) h3': ['Find Us in Reykjavík', 'Finndu okkur í Reykjavík'],
 
     // Special Offers Section
-    '#special-offers span.text-label-sm': ['Promo', 'Tilboð'],
-    '#special-offers h2': ['Special Offers', 'Sértilboð'],
+    '#special-offers span.text-label-sm': ['Lunch Deals', 'Hádegistilboð'],
+    '#special-offers h2': ['Lunch Offers', 'Hádegistilboð'],
     '#special-offers p.font-body-md': [
-        'Our guests\' favorites, prepared fresh daily.',
-        'Uppáhalds réttir gesta okkar, ferskt á hverjum degi.'
+        'Monday to Friday 11:00 - 14:00',
+        'Mánudaga til föstudaga 11:00 - 14:00'
     ],
-    '#special-offers div.grid > div:nth-of-type(1) h3': ['Lite Kebab Combo', 'Lite Kebab Tilboð'],
+    '#special-offers div.grid > div:nth-of-type(1) h3': ['Crispy Taco Combo', 'Stökkt Taco Tilboð'],
     '#special-offers div.grid > div:nth-of-type(1) p': [
-        'Lite kebab served with crispy French fries and a refreshing cold soda.',
-        'Lite kebab borinn fram með stökkum frönskum og ísköldu gosi.'
+        'Crispy taco served with fries/soup & soda.',
+        'Stökkt taco borið fram með frönskum/súpu og gosi.'
     ],
-    '#special-offers div.grid > div:nth-of-type(2) h3': ['Pita Kebab Combo', 'Pita Kebab Tilboð'],
+    '#special-offers div.grid > div:nth-of-type(2) h3': ['Crepe Bolognese Combo', 'Bolognese Pönnuköku Tilboð'],
     '#special-offers div.grid > div:nth-of-type(2) p': [
-        'Warm pita bread filled with kebab, fresh veggies, served with fries and a soda.',
-        'Heitt pítubrauð fyllt með kebab, fersku grænmeti, borið fram með frönskum og gosi.'
+        'Crepe Bolognese served with fries/soup & soda.',
+        'Bolognese pönnukaka borin fram með frönskum/súpu og gosi.'
+    ],
+    '#special-offers div.grid > div:nth-of-type(3) h3': ['Fish & Chips Combo', 'Fiskur & Franskar Tilboð'],
+    '#special-offers div.grid > div:nth-of-type(3) p': [
+        'Crispy battered fish served with fries, tartar sauce, and a soda.',
+        'Stökkur djúpsteiktur fiskur borið fram með frönskum, tartarsósu og gosi.'
     ],
 
     // Food Gallery Section
