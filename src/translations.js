@@ -213,5 +213,43 @@ export const strings = {
         'Við notum vefkökur til að bæta upplifun þína á vefsíðunni okkar. Með því að halda áfram samþykkir þú notkun á vefkökum.'
     ],
     '#cancel-btn': ['Decline', 'Hafna'],
-    '#accept-btn': ['Accept All', 'Samþykkja allt']
+    '#accept-btn': ['Accept All', 'Samþykkja allt'],
+
+    // New Footer Info Details
+    '.footer-phone': [
+        'Phone: <a href="tel:+3544156480" class="hover:text-primary-container transition-colors duration-200">+354 415 6480</a>',
+        'Sími: <a href="tel:+3544156480" class="hover:text-primary-container transition-colors duration-200">+354 415 6480</a>'
+    ],
+    '.footer-email': [
+        'Email: <a href="mailto:info@andrez.is" class="hover:text-primary-container transition-colors duration-200">info@andrez.is</a>',
+        'Netfang: <a href="mailto:info@andrez.is" class="hover:text-primary-container transition-colors duration-200">info@andrez.is</a>'
+    ],
+
+    // Terms and Conditions Contact Info Section
+    'aside a[href="#contact-info"]': ['7. Contact Information', '7. Samskiptaupplýsingar'],
+    '#contact-info h2': ['7. Contact Information', '7. Samskiptaupplýsingar'],
+    '#contact-info p': [
+        'For any questions or concerns regarding these Terms and Conditions, please contact us:',
+        'Fyrir spurningar eða athugasemdir varðandi þessa skilmála, vinsamlegast hafðu samband við okkur:'
+    ],
+    '#contact-info li:nth-of-type(1)': [
+        '<strong>Company Name:</strong> Andrez ehf.',
+        '<strong>Fyrirtæki:</strong> Andrez ehf.'
+    ],
+    '#contact-info li:nth-of-type(2)': [
+        '<strong>Registration Number:</strong> 601025-1080',
+        '<strong>Kennitala:</strong> 601025-1080'
+    ],
+    '#contact-info li:nth-of-type(3)': [
+        '<strong>Address:</strong> Borgartún 29, 105 Reykjavík',
+        '<strong>Heimilisfang:</strong> Borgartún 29, 105 Reykjavík'
+    ],
+    '#contact-info li:nth-of-type(4)': [
+        '<strong>Phone:</strong> <a href="tel:+3544156480" class="text-white hover:text-[#ffba20] underline transition-colors duration-200">+354 415 6480</a>',
+        '<strong>Sími:</strong> <a href="tel:+3544156480" class="text-white hover:text-[#ffba20] underline transition-colors duration-200">+354 415 6480</a>'
+    ],
+    '#contact-info li:nth-of-type(5)': [
+        '<strong>Email:</strong> <a href="mailto:info@andrez.is" class="text-white hover:text-[#ffba20] underline transition-colors duration-200">info@andrez.is</a>',
+        '<strong>Netfang:</strong> <a href="mailto:info@andrez.is" class="text-white hover:text-[#ffba20] underline transition-colors duration-200">info@andrez.is</a>'
+    ]
 };
