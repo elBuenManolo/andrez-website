@@ -61,10 +61,10 @@ export const strings = {
         'Notalegt horn í hjarta Reykjavíkur þar sem hver taco er vafinn af ást og hver pönnukaka er lítill biti af Frakklandi.'
     ],
     '#our-place p.text-black': [
-        'Best French Tacos I\'ve ever had outside Lyon!',
-        'Bestu frönsku tacos sem ég hef fengið utan Lyon!'
+        'Amazing food and amazing staff!!! I highly recommend it!',
+        'Frábær matur og frábært starfsfólk!!! Ég mæli hiklaust með því!'
     ],
-    '#our-place span.mt-3': ['— Happy Customer', '— Ánægður viðskiptavinur'],
+    '#our-place span.mt-3': ['— Natasha', '— Natasha'],
 
     // Our Place Image Captions (Gallery Grid)
     '#our-place div.grid > div:nth-of-type(1) span': ['Interior', 'Innan dyra'],
@@ -74,7 +74,7 @@ export const strings = {
     '#our-place div.grid > div:nth-of-type(4) span': ['Seating', 'Sæti'],
     '#our-place div.grid > div:nth-of-type(4) h3': ['Dining Booths', 'Básar'],
     '#our-place div.grid > div:nth-of-type(5) span': ['Greek & French', 'Grikkland & Frakkland'],
-    '#our-place div.grid > div:nth-of-type(5) h3': ['Both our homelands', 'Báð löndin okkar'],
+    '#our-place div.grid > div:nth-of-type(5) h3': ['Both our cuisines', 'Báðar matargerðirnar'],
     '#our-place div.grid > div:nth-of-type(6) span': ['Exterior', 'Utandyra'],
     '#our-place div.grid > div:nth-of-type(6) h3': ['Find Us in Reykjavík', 'Finndu okkur í Reykjavík'],
 
@@ -112,8 +112,8 @@ export const strings = {
     '#food-gallery-grid > div:nth-of-type(1) h3': ['Sweet Crepes', 'Sætar pönnukökur'],
     '#food-gallery-grid > div:nth-of-type(2) span': ['French Tacos', 'Franskir tacos'],
     '#food-gallery-grid > div:nth-of-type(2) h3': ['Pulled Pork Taco', 'Taco með rifnu svínakjöti'],
-    '#food-gallery-grid > div:nth-of-type(3) span': ['Dessert', 'Eftirréttur'],
-    '#food-gallery-grid > div:nth-of-type(3) h3': ['Oreo Crepe', 'Oreo pönnukaka'],
+    '#food-gallery-grid > div:nth-of-type(3) span': ['Speciality', 'Sérstaða'],
+    '#food-gallery-grid > div:nth-of-type(3) h3': ['Fish & Chips', 'Fiskur & Franskar'],
     '#food-gallery-grid > div:nth-of-type(4) span': ['Savory', 'Matarmiklar'],
     '#food-gallery-grid > div:nth-of-type(4) h3': ['Savory Crepes', 'Matarpönnukökur'],
     '#food-gallery-grid > div:nth-of-type(5) span': ['Best Deal', 'Besta verðið'],
@@ -124,6 +124,12 @@ export const strings = {
     '#food-gallery-grid > div:nth-of-type(7) h3': ['Gratinated Crepe', 'Gratineruð pönnukaka'],
     '#food-gallery-grid > div:nth-of-type(8) span': ['Dessert', 'Eftirréttur'],
     '#food-gallery-grid > div:nth-of-type(8) h3': ['Oreo Rolls', 'Oreo rúllur'],
+    '#food-gallery-grid > div:nth-of-type(9) span': ['Sweet Crepe', 'Sæt pönnukaka'],
+    '#food-gallery-grid > div:nth-of-type(9) h3': ['French Crepe', 'Frönsk pönnukaka'],
+    '#food-gallery-grid > div:nth-of-type(10) span': ['French Taco', 'Franskt taco'],
+    '#food-gallery-grid > div:nth-of-type(10) h3': ['Delicious Taco', 'Ljúffengt taco'],
+    '#food-gallery-grid > div:nth-of-type(11) span': ['Savory Crepe', 'Matarpönnukaka'],
+    '#food-gallery-grid > div:nth-of-type(11) h3': ['Cheesy Crepe', 'Ostapönnukaka'],
     '#menu .text-center a': ['View Full Menu', 'Skoða allan matseðilinn'],
 
     // Google Reviews Section

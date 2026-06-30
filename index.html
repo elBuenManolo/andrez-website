@@ -16,7 +16,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
                 rel="stylesheet">
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link rel="icon" type="image/webp" href="/andrez-logo-letters.webp" />
         <link rel="stylesheet" href="/src/style.css" />
         <script type="module" src="/src/main.js"></script>
@@ -76,7 +75,7 @@
 
                 <!-- Mobile Sidebar Menu -->
                 <div id="mobile-sidebar"
-                        class="md:hidden fixed top-0 right-0 h-screen w-[280px] bg-[#0e0e0e] border-l border-surface-container-high z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-24 px-6 gap-6 shadow-2xl">
+                        class="md:hidden fixed top-0 right-0 h-screen w-[280px] bg-[#0e0e0e] border-l border-surface-container-high z-50 transition-transform duration-300 ease-in-out flex flex-col pt-24 px-6 gap-6 shadow-2xl">
                         <a class="text-on-surface hover:text-primary-container pl-3 py-2 font-label-sm text-label-sm transition-colors duration-200 uppercase tracking-widest border-b border-surface-container-high/50"
                                 href="#menu">Menu</a>
                         <a class="text-on-surface hover:text-primary-container pl-3 py-2 font-label-sm text-label-sm transition-colors duration-200 uppercase tracking-widest border-b border-surface-container-high/50"
@@ -481,7 +480,8 @@
                                                 </div>
                                                 <div
                                                         class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                                        <span class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Exterior</span>
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Exterior</span>
                                                         <h3 class="text-white font-black text-lg mt-1">Find Us in
                                                                 Reykjavík</h3>
                                                 </div>
@@ -496,12 +496,14 @@
                         <div class="max-w-7xl mx-auto">
                                 <div class="text-left mb-margin-desktop reveal">
                                         <span
-                                                class="text-[#ffba20] font-label-sm text-label-sm uppercase tracking-[0.3em] mb-3 block">Lunch Deals</span>
+                                                class="text-[#ffba20] font-label-sm text-label-sm uppercase tracking-[0.3em] mb-3 block">Lunch
+                                                Deals</span>
                                         <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-2"
                                                 style="font-family: 'Archivo Narrow', sans-serif;">
                                                 Lunch Offers</h2>
                                         <div class="h-1 w-24 bg-primary-container mb-4"></div>
-                                        <p class="font-body-md text-body-md text-neutral-400">Monday to Friday 11:00 - 14:00</p>
+                                        <p class="font-body-md text-body-md text-neutral-400">Monday to Friday 11:00 -
+                                                14:00</p>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal"
                                         style="transition-delay: 100ms;">
@@ -535,7 +537,8 @@
                                         <div
                                                 class="bg-neutral-950 flex flex-col justify-between overflow-hidden group transition-all duration-300 border border-neutral-900 hover:border-neutral-800">
                                                 <div class="aspect-[16/10] w-full overflow-hidden relative">
-                                                        <img src="/offer-crepe-bolognese.png" alt="Crepe Bolognese Offer"
+                                                        <img src="/offer-crepe-bolognese.png"
+                                                                alt="Crepe Bolognese Offer"
                                                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                         <div
                                                                 class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80">
@@ -548,7 +551,8 @@
                                                                         Crepe Bolognese Combo</h3>
                                                                 <p
                                                                         class="text-sm text-neutral-400 mt-2 font-body-md leading-relaxed">
-                                                                        Crepe Bolognese served with fries/soup and a soda.
+                                                                        Crepe Bolognese served with fries/soup and a
+                                                                        soda.
                                                                 </p>
                                                         </div>
                                                         <div class="bg-red-600 text-white text-center py-3.5 text-base font-bold uppercase tracking-wider transition-all duration-300"
@@ -574,7 +578,8 @@
                                                                         Fish & Chips Combo</h3>
                                                                 <p
                                                                         class="text-sm text-neutral-400 mt-2 font-body-md leading-relaxed">
-                                                                        Crispy battered fish served with fries, tartar sauce, and a soda.
+                                                                        Crispy battered fish served with fries, tartar
+                                                                        sauce, and a soda.
                                                                 </p>
                                                         </div>
                                                         <div class="bg-red-600 text-white text-center py-3.5 text-base font-bold uppercase tracking-wider transition-all duration-300"
@@ -641,11 +646,11 @@
                                                 </div>
                                         </div>
 
-                                        <!-- 3: Oreo Crepe — Standard -->
+                                        <!-- 3: Fish and chips — Standard -->
                                         <div class="gallery-item col-span-1 row-span-1 overflow-hidden group relative cursor-pointer reveal"
                                                 data-gallery-index="2" style="transition-delay:150ms;">
                                                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-QtzEpg3tXNS0g3GpOSNsIqDWPPGAjBjikjbxbRYqZpZjZBjxux0uRUka6lsxrkTH51x79KX8Gg9Cg6pDPtUH_pCZ8MAZxujbplegIym7mTLdmQ6MqqcBfP17pEggvMH3iqiVJajGDQ54wUJZi69bDZ8uA8cQ4yVSDfzJTPsEzFS4x4_p24q1sXxUPn5zzMoLOCSmXZ4Epb2MnfrihSZArmeG7NsK_FK1fPQRjj9aADpGkw8uedsH4lRGxGVTBnYAa5HZPhEeebIW"
-                                                        alt="Oreo Crepe"
+                                                        alt="Fish & Chips"
                                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div
                                                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
@@ -653,8 +658,9 @@
                                                 <div
                                                         class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                                         <span
-                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Dessert</span>
-                                                        <h3 class="text-white font-black text-base mt-1">Oreo Crepe</h3>
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Specialty</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Fish & Chips
+                                                        </h3>
                                                 </div>
                                         </div>
 
@@ -746,6 +752,60 @@
                                                         <span
                                                                 class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Dessert</span>
                                                         <h3 class="text-white font-black text-base mt-1">Oreo Rolls</h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- 10: French Crepe — Standard -->
+                                        <div class="gallery-item col-span-1 row-span-1 overflow-hidden group relative cursor-pointer reveal"
+                                                data-gallery-index="9" style="transition-delay:500ms;">
+                                                <img src="/gallery-crepe.webp" alt="French Crepe"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Sweet
+                                                                Crepe</span>
+                                                        <h3 class="text-white font-black text-base mt-1">French Crepe
+                                                        </h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- 11: French Taco — Standard -->
+                                        <div class="gallery-item col-span-1 row-span-1 overflow-hidden group relative cursor-pointer reveal"
+                                                data-gallery-index="10" style="transition-delay:550ms;">
+                                                <img src="/gallery-taco.webp" alt="French Taco"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">French
+                                                                Taco</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Delicious Taco
+                                                        </h3>
+                                                </div>
+                                        </div>
+
+                                        <!-- 12: Cheesy Crepe — Standard -->
+                                        <div class="gallery-item col-span-2 row-span-1 overflow-hidden group relative cursor-pointer reveal"
+                                                data-gallery-index="11" style="transition-delay:600ms;">
+                                                <img src="/gallery-cheesy-crepe.webp" alt="Cheesy Crepe"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                </div>
+                                                <div
+                                                        class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                        <span
+                                                                class="text-[#ffba20] text-xs font-bold uppercase tracking-widest">Savory
+                                                                Crepe</span>
+                                                        <h3 class="text-white font-black text-base mt-1">Cheesy Crepe
+                                                        </h3>
                                                 </div>
                                         </div>
 
@@ -871,7 +931,7 @@
 
                                         <!-- Column 2 & 3: Reviews Feed -->
                                         <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                                <!-- Review Card 1 (Edilon Hoti) -->
+                                                <!-- Review Card 1 (Edilon) -->
                                                 <div class="bg-[#121212] border border-neutral-800 p-6 rounded-none flex flex-col justify-between smooth-shadow reveal hover:border-neutral-700 transition-all duration-300"
                                                         style="transition-delay: 150ms;">
                                                         <div>
@@ -884,7 +944,7 @@
                                                                                 <div>
                                                                                         <h4
                                                                                                 class="text-white font-bold text-sm leading-none">
-                                                                                                Edilon Hoti</h4>
+                                                                                                Edilon H.</h4>
                                                                                         <span
                                                                                                 class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1 block">2
                                                                                                 reviews</span>
@@ -919,7 +979,7 @@
                                                                 ago</span>
                                                 </div>
 
-                                                <!-- Review Card 2 (Elís Móses) -->
+                                                <!-- Review Card 2 (Elís) -->
                                                 <div class="bg-[#121212] border border-neutral-800 p-6 rounded-none flex flex-col justify-between smooth-shadow reveal hover:border-neutral-700 transition-all duration-300"
                                                         style="transition-delay: 200ms;">
                                                         <div>
@@ -932,7 +992,7 @@
                                                                                 <div>
                                                                                         <h4
                                                                                                 class="text-white font-bold text-sm leading-none">
-                                                                                                Elís Móses</h4>
+                                                                                                Elís M.</h4>
                                                                                         <span
                                                                                                 class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1 block">2
                                                                                                 reviews · 2
@@ -967,7 +1027,7 @@
                                                                 ago</span>
                                                 </div>
 
-                                                <!-- Review Card 3 (Kari Jon) -->
+                                                <!-- Review Card 3 (Kari) -->
                                                 <div class="bg-[#121212] border border-neutral-800 p-6 rounded-none flex flex-col justify-between smooth-shadow reveal hover:border-neutral-700 transition-all duration-300"
                                                         style="transition-delay: 250ms;">
                                                         <div>
@@ -980,7 +1040,7 @@
                                                                                 <div>
                                                                                         <h4
                                                                                                 class="text-white font-bold text-sm leading-none">
-                                                                                                Kari Jon</h4>
+                                                                                                Kari J.</h4>
                                                                                         <span
                                                                                                 class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1 block">4
                                                                                                 reviews · 1 photo</span>
@@ -1015,7 +1075,7 @@
                                                                 ago</span>
                                                 </div>
 
-                                                <!-- Review Card 4 (pintea cristian) -->
+                                                <!-- Review Card 4 (pintea) -->
                                                 <div class="bg-[#121212] border border-neutral-800 p-6 rounded-none flex flex-col justify-between smooth-shadow reveal hover:border-neutral-700 transition-all duration-300"
                                                         style="transition-delay: 300ms;">
                                                         <div>
@@ -1028,7 +1088,7 @@
                                                                                 <div>
                                                                                         <h4
                                                                                                 class="text-white font-bold text-sm leading-none">
-                                                                                                pintea cristian</h4>
+                                                                                                Pintea C.</h4>
                                                                                         <span
                                                                                                 class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1 block">4
                                                                                                 reviews · 1 photo</span>
