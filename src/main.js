@@ -326,27 +326,7 @@ function initFoodGallery() {
         });
 }
 
-function initTicketVisibility() {
-        const ticket = document.getElementById('static-ticket');
-        const specialOffers = document.getElementById('special-offers');
-        if (!ticket || !specialOffers) return;
 
-        const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                                ticket.classList.add('opacity-0', 'pointer-events-none');
-                                ticket.classList.remove('opacity-100');
-                        } else {
-                                ticket.classList.remove('opacity-0', 'pointer-events-none');
-                                ticket.classList.add('opacity-100');
-                        }
-                });
-        }, {
-                threshold: 0
-        });
-
-        observer.observe(specialOffers);
-}
 
 function initLanguageToggle() {
         const desktopBtn = document.getElementById('lang-toggle-desktop');
@@ -408,7 +388,6 @@ function init() {
         initNavbarScroll();
         cookieConsent();
         initFoodGallery();
-        initTicketVisibility();
         initLanguageToggle();
 }
 

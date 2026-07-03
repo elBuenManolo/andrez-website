@@ -90,10 +90,10 @@ export const strings = {
         'Crispy taco served with fries/soup & soda.',
         'Stökkt taco borið fram með frönskum/súpu og gosi.'
     ],
-    '#special-offers div.grid > div:nth-of-type(2) h3': ['Crepe Bolognese Combo', 'Bolognese Pönnuköku Tilboð'],
+    '#special-offers div.grid > div:nth-of-type(2) h3': ['Crepe Champignon Combo', 'Champignon Pönnuköku Tilboð'],
     '#special-offers div.grid > div:nth-of-type(2) p': [
-        'Crepe Bolognese served with fries/soup & soda.',
-        'Bolognese pönnukaka borin fram með frönskum/súpu og gosi.'
+        'Crepe champignon served with fries/soup & soda.',
+        'Champignon pönnukaka borin fram með frönskum/súpu og gosi.'
     ],
     '#special-offers div.grid > div:nth-of-type(3) h3': ['Fish & Chips Combo', 'Fiskur & Franskar Tilboð'],
     '#special-offers div.grid > div:nth-of-type(3) p': [
