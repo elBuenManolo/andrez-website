@@ -430,8 +430,7 @@ html {
 
 @media (min-width: 768px) {
         #our-place {
-                background-image: url('/potato-fondo.png');
-                aspect-ratio: 1920/1080;
+                background-image: none;
         }
 }
 
