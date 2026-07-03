@@ -164,30 +164,11 @@ function initNavbarScroll() {
         if (!nav) return;
 
         function handleScroll() {
-                if (window.innerWidth < 768) {
-                        nav.classList.add('bg-[#e89e1b]', 'shadow-md');
-                        nav.classList.remove('bg-transparent', 'shadow-none');
-                        if (mobileMenuBtn) {
-                                mobileMenuBtn.classList.add('text-black');
-                                mobileMenuBtn.classList.remove('text-white');
-                        }
-                        return;
-                }
-
-                if (window.scrollY > 20) {
-                        nav.classList.add('bg-[#e89e1b]', 'shadow-md');
-                        nav.classList.remove('bg-transparent', 'shadow-none');
-                        if (mobileMenuBtn) {
-                                mobileMenuBtn.classList.add('text-black');
-                                mobileMenuBtn.classList.remove('text-white');
-                        }
-                } else {
-                        nav.classList.remove('bg-[#e89e1b]', 'shadow-md');
-                        nav.classList.add('bg-transparent', 'shadow-none');
-                        if (mobileMenuBtn) {
-                                mobileMenuBtn.classList.remove('text-black');
-                                mobileMenuBtn.classList.add('text-white');
-                        }
+                nav.classList.add('bg-[#e89e1b]', 'shadow-md');
+                nav.classList.remove('bg-transparent', 'shadow-none');
+                if (mobileMenuBtn) {
+                        mobileMenuBtn.classList.add('text-black');
+                        mobileMenuBtn.classList.remove('text-white');
                 }
         }
 
