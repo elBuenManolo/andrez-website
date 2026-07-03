@@ -29,8 +29,8 @@ export const strings = {
 
     // Hero Section
     'main section h1': [
-        'Authentic French <span class="gold-text-shiny">Tacos</span> &amp; <span class="gold-text-shiny">Crepes</span> in the Heart of <span class="gold-text-shiny">Reykjavík</span>',
-        'Ekta franskir <span class="gold-text-shiny">tacos</span> &amp; <span class="gold-text-shiny">pönnukökur</span> í hjarta <span class="gold-text-shiny">Reykjavíkur</span>'
+        'French <span class="gold-text-shiny">Tacos</span> &amp; <span class="gold-text-shiny">Crepes</span>',
+        'Franskir <span class="gold-text-shiny">tacos</span> &amp; <span class="gold-text-shiny">pönnukökur</span>'
     ],
     'main section .hero-fade-3 p': [
         'Handcrafted daily at Borgartún 29 — where Lyon meets Reykjavík',
