@@ -44,9 +44,13 @@ export const strings = {
         '<span class="material-symbols-outlined text-[20px]">restaurant</span>View Menu',
         '<span class="material-symbols-outlined text-[20px]">restaurant</span>Skoða matseðil'
     ],
-    'main section .flex-col a[href*="maps.app.goo.gl"]': [
+    'main section .flex-col a[href*="maps.app.goo.gl"]:not(#hero-leave-review)': [
         '<span class="material-symbols-outlined text-[20px]">location_on</span>Find Us',
         '<span class="material-symbols-outlined text-[20px]">location_on</span>Finna okkur'
+    ],
+    '#hero-leave-review': [
+        'Leave a review!!!',
+        'Gefa umsögn!!!'
     ],
     'main section .flex-col a[href*="wolt.com"]': [
         '<svg viewBox="60 95 150 110" width="24" height="18" class="flex-shrink-0"><path d="M 75 110 L 105 190 L 135 110 L 165 190 L 195 110" fill="none" stroke="#00C2E8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" /></svg>Order on Wolt',
